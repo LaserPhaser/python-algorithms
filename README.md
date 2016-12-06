@@ -19,6 +19,8 @@ Currently implemented the following algorithms:
  - Fibonacci [Recursive method]
  - Fibonacci [partial sum with Pisano period]
  - Fibonacci [with Pisano period ]
+ - Rabin-karp algorithm searching text in strings using hash
+ - Hash chains example
 - Sorting
  - Merge sort
  - Quick sort [3 partitions with randomized pivot]
