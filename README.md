@@ -25,3 +25,10 @@ Currently implemented the following algorithms:
  - Merge sort
  - Quick sort [3 partitions with randomized pivot]
 
+
+
+- Unsorted:
+ - Tree traversal methods (in/pre/post order recursive and iterative)
+ - Rope datastructure (heawyweight strings based on splay tree with iterative inorder travelal)
+
+

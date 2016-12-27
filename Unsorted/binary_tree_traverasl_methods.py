@@ -66,6 +66,24 @@ class TreeOrders:
         self.result.append(self.key[node])
         return
 
+    def inOrderTraverse_iterative(self, node, res):
+        while node is not None:
+            if node.left is None:
+                res.append(node.data)
+                node = node.right
+            else:
+                prev = node.left
+                while prev.right is not None and prev.right is not node:
+                    prev = prev.right
+                if prev.right is None:
+                    prev.right = node
+                    node = node.left
+                else:
+                    prev.right = None
+                    res.append(node.data)
+                    node = node.right
+        return res
+
 
 def main():
     tree = TreeOrders()
