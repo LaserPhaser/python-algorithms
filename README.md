@@ -28,6 +28,8 @@ Currently implemented the following algorithms:
  - Topological Sort
  - DFS (Depth first search)
  - SCC (Strongly connected components)
+ - BFS (Breadth first search)
+ - Bipartite (Algorithms based on BFS for check that grap is bipartite)
 
 
 
