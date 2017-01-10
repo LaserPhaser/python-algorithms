@@ -24,11 +24,15 @@ Currently implemented the following algorithms:
 - Sorting
  - Merge sort
  - Quick sort [3 partitions with randomized pivot]
+- Algorithms on Graphs:
+ - Topological Sort
+ - DFS (Depth first search)
+ - SCC (Strongly connected components)
 
 
 
 - Unsorted:
- - Tree traversal methods (in/pre/post order recursive and iterative)
+ - Tree tonfigraversal methods (in/pre/post order recursive and iterative)
  - Rope datastructure (heawyweight strings based on splay tree with iterative inorder travelal)
 
 
