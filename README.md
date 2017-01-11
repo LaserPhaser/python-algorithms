@@ -30,11 +30,11 @@ Currently implemented the following algorithms:
  - SCC (Strongly connected components)
  - BFS (Breadth first search)
  - Bipartite (Algorithms based on BFS for check that grap is bipartite)
-
+ - Dijkstra (on priority queue)
 
 
 - Unsorted:
- - Tree tonfigraversal methods (in/pre/post order recursive and iterative)
+ - Tree traversal methods (in/pre/post order recursive and iterative)
  - Rope datastructure (heawyweight strings based on splay tree with iterative inorder travelal)
 
 
