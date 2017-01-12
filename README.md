@@ -19,7 +19,7 @@ Currently implemented the following algorithms:
  - Fibonacci [Recursive method]
  - Fibonacci [partial sum with Pisano period]
  - Fibonacci [with Pisano period ]
- - Rabin-karp algorithm searching text in strings using hash
+ - Rabin-Karp algorithm searching text in strings using hash
  - Hash chains example
 - Sorting
  - Merge sort
@@ -31,10 +31,11 @@ Currently implemented the following algorithms:
  - BFS (Breadth first search)
  - Bipartite (Algorithms based on BFS for check that grap is bipartite)
  - Dijkstra (on priority queue)
+ - Bellman-Ford algorithm (and negative cycle detection based on this approach)
 
 
 - Unsorted:
  - Tree traversal methods (in/pre/post order recursive and iterative)
- - Rope datastructure (heawyweight strings based on splay tree with iterative inorder travelal)
+ - Rope data structure (heavyweight strings based on splay tree with iterative in order traversal)
 
 
