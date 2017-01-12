@@ -32,6 +32,7 @@ Currently implemented the following algorithms:
  - Bipartite (Algorithms based on BFS for check that grap is bipartite)
  - Dijkstra (on priority queue)
  - Bellman-Ford algorithm (and negative cycle detection based on this approach)
+ - Bellman-Ford algorithm (and negative cycle detection based on this approach + infinity Arbitrage detection)
 
 
 - Unsorted:
