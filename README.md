@@ -33,6 +33,7 @@ Currently implemented the following algorithms:
  - Dijkstra (on priority queue)
  - Bellman-Ford algorithm (and negative cycle detection based on this approach)
  - Bellman-Ford algorithm (and negative cycle detection based on this approach + infinity Arbitrage detection)
+ - Kruskal algorithm for connecting points
 
 
 - Unsorted:
