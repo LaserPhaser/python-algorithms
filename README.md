@@ -30,10 +30,11 @@ Currently implemented the following algorithms:
  - SCC (Strongly connected components)
  - BFS (Breadth first search)
  - Bipartite (Algorithms based on BFS for check that grap is bipartite)
- - Dijkstra (on priority queue)
  - Bellman-Ford algorithm (and negative cycle detection based on this approach)
  - Bellman-Ford algorithm (and negative cycle detection based on this approach + infinity Arbitrage detection)
  - Kruskal algorithm for connecting points
+ - Dijkstra (on priority queue)
+ - Bidirectional Dijkstra (on priority queues)
 
 
 - Unsorted:
