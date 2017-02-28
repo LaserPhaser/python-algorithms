@@ -35,6 +35,7 @@ Currently implemented the following algorithms:
  - Kruskal algorithm for connecting points
  - Dijkstra (on priority queue)
  - Bidirectional Dijkstra (on priority queues)
+ - AStar  (potential function - euclidean distance)
 
 
 - Unsorted:
