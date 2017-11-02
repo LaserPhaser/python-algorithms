@@ -10,7 +10,7 @@ Contributions are always welcome, please read the rules before contributing.
 
 ## Currently implemented the following algorithms:
 
-###Arithmetic
+### Arithmetic
  - GCD [Greatest Common Divisor]
  - LCM [Least Common Multiple]
 
