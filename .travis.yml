@@ -2,4 +2,8 @@
   python:
     - 3.6
   script:
-    - pytest tests
+    - coverage run --source . -m py.test tests
+    - coverage report -m
+
+  after_success:
+    - coveralls
