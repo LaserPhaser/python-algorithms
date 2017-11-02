@@ -3,28 +3,25 @@ All source code in this project is under MIT license, feel free to use it anywhe
 Contributions are always welcome, please read the rules before contributing.
 
 
-Currently implemented the following algorithms:
-- Arithmetic
+## Currently implemented the following algorithms:
+
+###Arithmetic
  - GCD [Greatest Common Divisor]
  - LCM [Least Common Multiple]
-- Dynamic Programming
- - Knapsack
- - Fractional Knapsack
-- Geometric
+### Geometric
  - Covering segments
-- Searching
- - Binary search
+### Searching
+ - [Binary search] [../search/binary_search.py]
  - Closest pair
- - Linear search
  - Fibonacci [Recursive method]
  - Fibonacci [partial sum with Pisano period]
  - Fibonacci [with Pisano period ]
  - Rabin-Karp algorithm searching text in strings using hash
  - Hash chains example
-- Sorting
+### Sorting
  - Merge sort
  - Quick sort [3 partitions with randomized pivot]
-- Algorithms on Graphs:
+### Algorithms on Graphs:
  - Topological Sort
  - DFS (Depth first search)
  - SCC (Strongly connected components)
@@ -36,9 +33,11 @@ Currently implemented the following algorithms:
  - Dijkstra (on priority queue)
  - Bidirectional Dijkstra (on priority queues)
  - AStar  (potential function - euclidean distance)
+### Dynamic Programming
+ - Knapsack
+ - Fractional Knapsack
 
-
-- Unsorted:
+## Unsorted:
  - Tree traversal methods (in/pre/post order recursive and iterative)
  - Rope data structure (heavyweight strings based on splay tree with iterative in order traversal)
 
