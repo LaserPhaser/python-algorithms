@@ -1,5 +1,3 @@
-# Uses python3
-
 import sys
 
 
@@ -40,7 +38,6 @@ def DFS(adj):
 
 
 def dfs(adj, used, order, x):
-    # write your code here
     pass
 
 
@@ -50,7 +47,7 @@ def toposort(adj):
     DFS(adj)
     for i in ids[::-1]:
         order.append(i)
-    # write your code here
+
     return order
 
 

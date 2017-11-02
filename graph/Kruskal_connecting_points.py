@@ -1,11 +1,9 @@
-# Uses python3
-import sys
-import math
 import heapq
+import math
+import sys
 
 
 class UnionByRank(object):
-
     def __init__(self, data, n):
         self.data = data
         self.parent_int = list(range(0, n))
@@ -20,7 +18,7 @@ class UnionByRank(object):
 
     def find_and_compress(self, i):
         if i != self.parent_int[i]:
-            self.parent_int[i] = self.find_and_compress(self.parent_int[i])  # Path compression
+            self.parent_int[i] = self.find_and_compress(self.parent_int[i])
         return self.parent_int[i]
 
     def union(self, i, j):
@@ -47,18 +45,15 @@ class UnionByRank(object):
 
 
 def minimum_distance(x, y):
-    """ Kruskal MST algorithm
-    """
     result = 0
     union = UnionByRank(data=[z for z in range(n)], n=n)
     weight = []
-    # calculate weigth to all points
+
     for v in range(len(x)):
         for c in range(v + 1, len(x)):
             if c != v:
-                # print(x[c], y[c], x[v], y[v], math.sqrt((x[v] - x[c])**2 + (y[v] - y[c])**2))
-                heapq.heappush(weight, (math.sqrt((x[v] - x[c])**2 + (y[v] - y[c])**2), v, c))
-    # print(weight)
+                heapq.heappush(weight, (math.sqrt((x[v] - x[c]) ** 2 + (y[v] - y[c]) ** 2), v, c))
+
     while weight:
 
         distance, x, y = heapq.heappop(weight)

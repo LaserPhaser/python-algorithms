@@ -1,11 +1,8 @@
-# Uses python3
-
-import sys
 import queue
+import sys
 
 
 def bfs(adj, Aset):
-    # write your code here
     q = queue.Queue()
     for x in Aset:
         q.put(x)
@@ -19,10 +16,9 @@ def bfs(adj, Aset):
 
 
 def negative_cycle(adj, cost, s):
-    # write your code here
     distance[s] = 0
     reachable[s] = 1
-    # Bellman Ford Algoritm
+
     i = 0
     while i < len(adj):
         for u in range(len(adj)):
@@ -37,7 +33,7 @@ def negative_cycle(adj, cost, s):
                     if i == len(adj) - 1:
                         A.append(v)
         i += 1
-    # find cycles with BFS
+
     bfs(adj, A)
 
     return 0
@@ -45,7 +41,7 @@ def negative_cycle(adj, cost, s):
 
 def shortet_paths(adj, cost, s, distance, reachable, shortest):
     negative_cycle(adj, cost, s)
-    # write your code here
+
     pass
 
 
@@ -65,7 +61,7 @@ if __name__ == '__main__':
         cost[a - 1].append(w)
     s = data[0]
     s -= 1
-    distance = [10**19] * n
+    distance = [10 ** 19] * n
     reachable = [0] * n
     shortest = [1] * n
     visited = [False] * n

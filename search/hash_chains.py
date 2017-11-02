@@ -1,7 +1,4 @@
-# python3
-
 class Query:
-
     def __init__(self, query):
         self.type = query[0]
         if self.type == 'check':
@@ -16,7 +13,6 @@ class QueryProcessor:
 
     def __init__(self, bucket_count):
         self.bucket_count = bucket_count
-        # store all strings in one list
         self.elems = [[] for i in range(0, bucket_count)]
 
     def _hash_func(self, s):
@@ -36,9 +32,8 @@ class QueryProcessor:
 
     def process_query(self, query):
         if query.type == "check":
-            # use reverse order, because we append strings to the end
             self.write_chain(cur for cur in reversed(self.elems[query.ind])
-                        if self._hash_func(cur) == query.ind)
+                             if self._hash_func(cur) == query.ind)
         else:
             hash_string = self._hash_func(query.s)
             try:
@@ -58,6 +53,7 @@ class QueryProcessor:
         n = int(input())
         for i in range(n):
             self.process_query(self.read_query())
+
 
 if __name__ == '__main__':
     bucket_count = int(input())

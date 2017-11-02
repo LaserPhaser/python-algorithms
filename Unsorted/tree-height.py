@@ -1,11 +1,10 @@
-# python3
-
-import sys, threading
 import os
+import sys
+import threading
 from collections import defaultdict
 
-sys.setrecursionlimit(10 ** 7)  # max depth of recursion
-threading.stack_size(2 ** 27)  # new thread will get stack of such size
+sys.setrecursionlimit(10 ** 7)
+threading.stack_size(2 ** 27)
 
 
 class TreeHeight:
@@ -18,17 +17,8 @@ class TreeHeight:
         self.parent = list(map(int, parent))
 
     def compute_height(self):
-        # Replace this code with a faster implementation
         maxHeight = 0
-        '''
-        for vertex in range(self.n):
-            height = 0
-            i = vertex
-            while i != -1:
-                height += 1
-                i = self.parent[i]
-            maxHeight = max(maxHeight, height);
-        '''
+
         tree = defaultdict(list)
         for vertex in range(self.n):
             tree[self.parent[vertex]].append(vertex)
@@ -62,7 +52,6 @@ def do_testing():
 
 
 def main():
-    # do_testing()
     tree = TreeHeight()
     tree.read()
     print(tree.compute_height())

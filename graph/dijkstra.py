@@ -1,7 +1,5 @@
-# Uses python3
-
-import sys
 import queue
+import sys
 
 
 def relax(u, v):
@@ -9,7 +7,6 @@ def relax(u, v):
 
 
 def distance(adj, cost, s, t):
-    # write your code here
     dist[s] = 0
     q = queue.PriorityQueue()
     for x in range(n):
@@ -20,7 +17,7 @@ def distance(adj, cost, s, t):
             if dist[u] + cost[u][x] < dist[adj[u][x]]:
                 dist[adj[u][x]] = dist[u] + cost[u][x]
                 q.put(adj[u][x], dist[adj[u][x]])
-    if dist[t] == 10**19:
+    if dist[t] == 10 ** 19:
         return -1
     return dist[t]
 
@@ -34,7 +31,7 @@ if __name__ == '__main__':
     data = data[3 * m:]
     adj = [[] for _ in range(n)]
     cost = [[] for _ in range(n)]
-    dist = [10**19 for _ in range(n)]
+    dist = [10 ** 19 for _ in range(n)]
 
     for ((a, b), w) in edges:
         adj[a - 1].append(b - 1)

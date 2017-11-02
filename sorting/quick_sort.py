@@ -1,3 +1,6 @@
+import random
+
+
 def partition3(a, l, r):
     x = a[l]
     j = l
@@ -21,7 +24,6 @@ def randomized_quick_sort(a, l, r):
     k = random.randint(l, r)
 
     a[l], a[k] = a[k], a[l]
-    # use partition3
     m1, m2 = partition3(a, l, r)
     randomized_quick_sort(a, l, m1 - 1)
     randomized_quick_sort(a, m2 + 1, r)

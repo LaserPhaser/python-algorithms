@@ -1,4 +1,3 @@
-# python3
 import random
 
 
@@ -38,4 +37,3 @@ def rabin_karp(text, pattern):
 
 def get_occurrences(pattern, text):
     return rabin_karp(text, pattern)
-

@@ -1,7 +1,3 @@
-# Uses python3
-import sys
-
-
 def get_pisano_period_len(m):
     f = []
     f.append(0)

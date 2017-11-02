@@ -1,7 +1,5 @@
-# python3
-
-import sys
 import os
+import sys
 
 
 class Bracket:
@@ -38,7 +36,6 @@ def brackets_on_stack(text):
         return opening_brackets_stack.pop().position - len(opening_brackets_stack) + 1
 
 
-# Function for testing on examples from tests folder
 def do_testing():
     test_folder = os.path.join(os.path.dirname(__file__), 'tests/')
     for fn in os.listdir(test_folder):
@@ -50,7 +47,7 @@ def do_testing():
             assert str(brackets_on_stack(text)) == solution, "{} is not {}".format(brackets_on_stack(text), solution)
     return True
 
+
 if __name__ == "__main__":
     text = sys.stdin.read()
     print(brackets_on_stack(text))
-    #do_testing()

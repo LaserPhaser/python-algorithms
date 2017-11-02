@@ -1,11 +1,8 @@
-# Uses python3
-
-import sys
 import queue
+import sys
 
 
 def bipartite(adj):
-    # write your code here
     q = queue.Queue()
     s = 0
     color[s] = 1

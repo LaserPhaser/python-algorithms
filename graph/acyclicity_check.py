@@ -1,5 +1,3 @@
-# Uses python3
-
 import sys
 
 

@@ -1,14 +1,8 @@
-# Uses python3
-
-import sys
 import queue
-
-
-# def bfs(adj, s):
+import sys
 
 
 def distance(adj, s, t):
-    # write your code here
     q = queue.Queue()
     layer[s] = 0
     visited[s] = True

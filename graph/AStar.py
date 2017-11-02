@@ -1,15 +1,11 @@
-#!/usr/bin/python3
-
-import sys
-import queue
 import math
-
-
+import queue
+import sys
 
 
 class AStar:
     def __init__(self, n, adj, cost, x, y):
-        # See the explanations of these fields in the starter for friend_suggestion
+
         self.n = n
         self.adj = adj
         self.cost = cost
@@ -17,20 +13,18 @@ class AStar:
         self.d = [self.inf] * n
         self.visited = [False] * n
         self.workset = []
-        # Coordinates of the nodes
+
         self.x = x
         self.y = y
 
-    # See the explanation of this method in the starter for friend_suggestion
     def clear(self):
         for v in self.workset:
             self.d[v] = self.inf
             self.visited[v] = False
         del self.workset[0:len(self.workset)]
 
-    # See the explanation of this method in the starter for friend_suggestion
     def visit(self, q, v, dist, measure):
-        # Implement this method yourself
+
         if self.d[v] > dist:
             self.d[v] = dist
 
@@ -41,7 +35,6 @@ class AStar:
     def potential(self, v, t):
         return math.sqrt((self.x[v] - self.x[t]) ** 2 + (self.y[v] - self.y[t]) ** 2)
 
-    # Returns the distance from s to t in the graph
     def query(self, s, t):
         self.clear()
         q = queue.PriorityQueue()

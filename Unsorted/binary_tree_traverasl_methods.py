@@ -1,9 +1,8 @@
-# python3
+import sys
+import threading
 
-import sys, threading
-
-sys.setrecursionlimit(10 ** 6)  # max depth of recursion
-threading.stack_size(2 ** 27)  # new thread will get stack of such size
+sys.setrecursionlimit(10 ** 6)
+threading.stack_size(2 ** 27)
 
 
 class TreeOrders:
@@ -21,29 +20,25 @@ class TreeOrders:
     def inOrder(self):
         self.result = []
         self.inOrderTraverse(0)
-        # You may need to add a new recursive method to do that
 
         return self.result
 
     def inOrderTraverse(self, node):
-        if node == -1:  # we met node without childs
+        if node == -1:
             return
         self.inOrderTraverse(self.left[node])
         self.result.append(self.key[node])
         self.inOrderTraverse(self.right[node])
         return
 
-    # Finish the implementation
-
     def preOrder(self):
         self.result = []
-        # Finish the implementation
-        # You may need to add a new recursive method to do that
+
         self.preOrderTraverse(0)
         return self.result
 
     def preOrderTraverse(self, node):
-        if node == -1:  # we met node without childs
+        if node == -1:
             return
         self.result.append(self.key[node])
         self.preOrderTraverse(self.left[node])
@@ -53,13 +48,11 @@ class TreeOrders:
     def postOrder(self):
         self.result = []
         self.postOrderTraverse(0)
-        # Finish the implementation
-        # You may need to add a new recursive method to do that
 
         return self.result
 
     def postOrderTraverse(self, node):
-        if node == -1:  # we met node without childs
+        if node == -1:
             return
         self.postOrderTraverse(self.left[node])
         self.postOrderTraverse(self.right[node])

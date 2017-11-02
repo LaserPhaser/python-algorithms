@@ -1,8 +1,4 @@
-# python3
-
 import sys
-
-# from pygraphviz import *
 
 root = None
 global idt
@@ -33,29 +29,6 @@ def inOrderTraverse(node, res):
                 node = node.right
     return res
 
-
-# def inOrderTraverse(node, res):
-#     if node is None:  # we met node without childs
-#         return
-#     inOrderTraverse(node.left, res)
-#     res.append(node.data)
-#     #res += node.data
-#     inOrderTraverse(node.right, res)
-#
-#     return res
-#
-#
-# A = AGraph()
-# A.node_attr['style'] = 'filled'
-# A.node_attr['shape'] = 'rectangle'
-# A.node_attr['fixedsize'] = 'true'
-#
-# ans = []
-
-
-# Splay tree implementation
-
-# Vertex of a splay tree
 
 class Vertex:
     def __init__(self, key, sum, left, right, parent, data):
@@ -98,21 +71,19 @@ def smallRotation(v):
 
 def bigRotation(v):
     if v.parent.left == v and v.parent.parent.left == v.parent:
-        # Zig-zig
+
         smallRotation(v.parent)
         smallRotation(v)
     elif v.parent.right == v and v.parent.parent.right == v.parent:
-        # Zig-zig
+
         smallRotation(v.parent)
         smallRotation(v)
     else:
-        # Zig-zag
+
         smallRotation(v)
         smallRotation(v)
 
 
-# Makes splay of the given vertex and makes
-# it the new root.
 def splay(v):
     if v == None:
         return None
@@ -124,14 +95,6 @@ def splay(v):
     return v
 
 
-# Searches for the given key in the tree with the given root
-# and calls splay for the deepest visited node after that.
-# Returns pair of the result and the new root.
-# If found, result is a pointer to the node with the given key.
-# Otherwise, result is a pointer to the node with the smallest
-# bigger key (next value in the order).
-# If the key is bigger than all keys in the tree,
-# then result is None.
 def find(root, key):
     v = root
     last = root
@@ -182,9 +145,6 @@ def merge(left, right):
     return right
 
 
-# Code that uses splay tree to solve the problem
-
-
 def insert(x, data):
     global root
     (left, right) = split(root, x)
@@ -218,7 +178,6 @@ class Rope:
         self.s = s
         for i in range(len(s)):
             insert(i, s[i])
-            # self.root = Vertex(data=self.s, weight=len(self.s), idt=0)
 
     def result(self):
         return prt(root)
@@ -245,37 +204,6 @@ class Rope:
         else:
             root = merge(merge(mid, left), right)
 
-            # prt(lj)
-            # prt(rj)
-            #
-            # root = merge(li, rj)
-            #
-            # print('root', k)
-            # if (k >= i):
-            #     k += 1
-            # else:
-            #     k
-            # prt(root)
-            # lk, rk = split(root, k)
-            # prt(lk)
-            # prt(rk)
-            # root = merge(merge(lk, lj), rk)
-            # print('Final!')
-            # prt(root)
-            # print('Final!\n\n')
-            #
-            # # 𝑒𝑓 𝑐𝑎𝑏𝑑#
-
-            # h l elowro ld
-
-
-# Input:
-# h l elow r old
-# 2
-# 1 1 2
-# 6 6 7
-# Output:
-# helloworld
 
 rope = Rope(sys.stdin.readline().strip())
 q = int(sys.stdin.readline())
@@ -283,28 +211,3 @@ for _ in range(q):
     i, j, k = map(int, sys.stdin.readline().strip().split())
     rope.process(i, j, k)
 print(rope.result())
-
-
-# 0 1 23 4 5 6 789
-# h l el o w r old
-
-#
-# root = None
-# rope = Rope('hlelowrold')
-# q = 2
-# i, j, k = (1, 1, 2)
-# rope.process(i, j, k)
-# i, j, k = (6, 6, 7)
-# rope.process(i, j, k)
-# print(rope.result())
-
-# prt(root)
-#
-# root = None
-# rope = Rope('abcdef')
-# q = 2
-# i, j, k = (0, 1, 1)
-# rope.process(i, j, k)
-# i, j, k = (4, 5, 0)
-# rope.process(i, j, k)
-# prt(root)

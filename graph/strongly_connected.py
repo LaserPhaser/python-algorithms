@@ -1,5 +1,3 @@
-# Uses python3
-
 import sys
 
 sys.setrecursionlimit(200000)
@@ -71,8 +69,8 @@ def number_of_strongly_connected_components(adj):
             explore(v)
             scc += 1
 
-    # write your code here
     return scc
+
 
 if __name__ == '__main__':
     input = sys.stdin.read()

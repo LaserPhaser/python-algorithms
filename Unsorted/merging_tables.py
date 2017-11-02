@@ -1,5 +1,3 @@
-# python3
-
 import sys
 
 
@@ -18,7 +16,7 @@ class UnionByRank(object):
 
     def find_and_compress(self, i):
         if i != self.parent_int[i]:
-            self.parent_int[i] = self.find_and_compress(self.parent_int[i])  # Path compression
+            self.parent_int[i] = self.find_and_compress(self.parent_int[i])
         return self.parent_int[i]
 
     def union(self, i, j):
@@ -48,18 +46,13 @@ n, m = map(int, sys.stdin.readline().split())
 lines = list(map(int, sys.stdin.readline().split()))
 rank = [1] * n
 parent = list(range(0, n))
-# n, m = 6, 4
-# lines = [10, 0, 5, 0, 3, 3]
-# rank = [1] * n
-# parent = list(range(0, n))
+
 ans = max(lines)
 union = UnionByRank(data=lines, rank=lines, n=n)
 
 
 def getParent(table):
-    # find parent and compress path
     return union.find(table)
-    # return parent[table]
 
 
 def merge(destination, source):
@@ -68,19 +61,12 @@ def merge(destination, source):
     if realDestination == realSource:
         return False
     union.union(realSource, realDestination)
-    # merge two components
-    # use union by rank heuristic 
-    # update ans with the new maximum table size
 
     return True
 
 
-# xx = [[3, 5], [2, 4], [1, 4], [5, 4], [5, 3]]x
-# xx = [[6, 6], [6, 5], [5, 4], [4, 3]]
-# xx = [[5, 3], [2, 4], [1, 4]]
-# xx = [[2, 4], [5, 2], [3,1],[2, 3], [2, 6]]
 for i in range(m):
     destination, source = map(int, sys.stdin.readline().split())
-    # destination, source = xx[i][0], xx[i][1]
+
     merge(destination - 1, source - 1)
     print(union.maxdata)

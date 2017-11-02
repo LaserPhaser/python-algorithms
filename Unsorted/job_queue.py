@@ -1,5 +1,3 @@
-# python3
-# import pygraphviz as PG
 import random
 
 
@@ -92,11 +90,6 @@ class JobQueue:
         self.num_workers, m = map(int, input().split())
         self.jobs = list(map(int, input().split()))
         assert m == len(self.jobs)
-        # self.num_workers, m = (2, 5)
-        # self.jobs = [1, 2,3 ,4 ,5]
-        # self.num_workers, m = (4, 20)
-        # self.jobs = [1, 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
-        # assert m == len(self.jobs)
 
     def stress_readjobs(self):
         self.num_workers, m = (random.randint(1, 1000), random.randint(10, 1000))
@@ -121,7 +114,7 @@ class JobQueue:
             workers_heap.insert(cpu, spent_time + self.jobs[i])
 
     def assign_jobs_bruteforce(self):
-        # TODO: replace this code with a faster algorithm.
+
         self.assigned_workers = [None] * len(self.jobs)
         self.start_times = [None] * len(self.jobs)
         next_free_time = [0] * self.num_workers
@@ -153,4 +146,3 @@ class JobQueue:
 if __name__ == '__main__':
     job_queue = JobQueue()
     job_queue.solve()
-    # job_queue.stress(10)
