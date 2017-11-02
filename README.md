@@ -1,6 +1,6 @@
 |Travis CI:||
 |---|---|
-| [![Build Status](https://travis-ci.com/ArseniyAntonov/Algorithms.svg?token=nXMCSJjXxpYVPmu2WGHj&branch=master)](https://travis-ci.com/ArseniyAntonov/Algorithms) | |
+| [![Build Status](https://travis-ci.org/ArseniyAntonov/Algorithms.svg?branch=master)](https://travis-ci.org/ArseniyAntonov/Algorithms) | |
 
 
 # Algorithms
