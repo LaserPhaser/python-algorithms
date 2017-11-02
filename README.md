@@ -10,9 +10,10 @@ Contributions are always welcome, please read the rules before contributing.
  - LCM [Least Common Multiple]
 ### Geometric
  - Covering segments
-### Searching
- - [Binary search] [../search/binary_search.py]
- - Closest pair
+### Searching||
+
+ - [Binary search](../search/binary_search.py) [Wiki](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+ - [Closest pair](../search/closest_pair.py)
  - Fibonacci [Recursive method]
  - Fibonacci [partial sum with Pisano period]
  - Fibonacci [with Pisano period ]
