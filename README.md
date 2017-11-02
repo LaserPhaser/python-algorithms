@@ -1,6 +1,6 @@
-|Travis CI:||
+|Travis CI Testing Status:| Coverage Status: |
 |---|---|
-| [![Build Status](https://travis-ci.org/ArseniyAntonov/Algorithms.svg?branch=master)](https://travis-ci.org/ArseniyAntonov/Algorithms) | |
+| [![Build Status](https://travis-ci.org/ArseniyAntonov/Algorithms.svg?branch=master)](https://travis-ci.org/ArseniyAntonov/Algorithms) | [![Coverage Status](https://coveralls.io/repos/github/ArseniyAntonov/Algorithms/badge.svg?branch=master)](https://coveralls.io/github/ArseniyAntonov/Algorithms?branch=master) |
 
 
 # Algorithms
