@@ -1,3 +1,8 @@
+|Travis CI:|asd|
+|---|---|
+| [![Build Status](https://travis-ci.com/ArseniyAntonov/Algorithms.svg?token=nXMCSJjXxpYVPmu2WGHj&branch=CleanUpTheMess)](https://travis-ci.com/ArseniyAntonov/Algorithms) | asd|
+
+
 # Algorithms
 All source code in this project is under MIT license, feel free to use it anywhere you need it.
 Contributions are always welcome, please read the rules before contributing.
