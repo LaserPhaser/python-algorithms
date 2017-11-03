@@ -2,14 +2,19 @@
 Greatest common divisor (gcd) of two or more integers, which are not all zero, is the largest positive integer that
 divides each of the integers.
 """
+from functools import reduce
+
+from arithmetic.utils import positive_integer
 
 
-def gcd(integer_a: int, integer_b: int) -> int:
+def _gcd(integer_a: int, integer_b: int) -> int:
     """
     Function for calculating GCD [greatest common divisor] of 2 integers
     :return: greatest common divisor of 2 integers
     """
-    value_check(integer_a, integer_b)
+    # Check that numbers are positive integers
+    positive_integer(integer_a)
+    positive_integer(integer_b)
 
     current_gcd = 1
     for divisor in range(2, min(integer_a, integer_b) + 1):
@@ -19,12 +24,5 @@ def gcd(integer_a: int, integer_b: int) -> int:
     return current_gcd
 
 
-def value_check(integer_a, integer_b) -> None:
-    """
-    Function that check that both values are integers and greater than 0,
-    Raise exception if it's not.
-    """
-    if not isinstance(integer_a, int) or not isinstance(integer_b, int):
-        raise TypeError('GCD function support only integer types')
-    if integer_a <= 0 or integer_b <= 0:
-        raise ValueError('GCD is not support negative numbers and zeros')
+def gcd(*integer_nums: int) -> int:
+    return int(reduce((lambda i, j: _gcd(i, j)), integer_nums))
