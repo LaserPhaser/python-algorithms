@@ -14,8 +14,9 @@ Contributions are always welcome, please read the rules before contributing.
  - [GCD [Greatest Common Divisor]](arithmetic/gcd.py)
  - [LCM [Least Common Multiple]](arithmetic/lcm.py)
 
-### Geometric
- - Covering segments
+### Greedy
+ - [Covering segments](greedy/covering_segments.py)
+ - [Fractional knapsack](greedy/fractional_knapsack.py)
  
 ### Searching
  - [Binary search](search/binary_search.py)
