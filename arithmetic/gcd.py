@@ -9,8 +9,8 @@ from arithmetic.utils import positive_integer
 
 def _gcd(integer_a: int, integer_b: int) -> int:
     """
-    Function for calculating GCD [greatest common divisor] of 2 integers
-    :return: greatest common divisor of 2 integers
+    Private function for calculating GCD [greatest common divisor] of 2 integers
+    :return: greatest common divisor of 2 positive integers
     """
     # Check that numbers are positive integers
     positive_integer(integer_a)
@@ -25,4 +25,9 @@ def _gcd(integer_a: int, integer_b: int) -> int:
 
 
 def gcd(*integer_nums: int) -> int:
+    """
+    Function for calculating GCD [greatest common divisor] of N integers
+    :param integer_nums: *args of numbers
+    :return: greatest common divisor of N positive integers
+    """
     return int(reduce((lambda i, j: _gcd(i, j)), integer_nums))

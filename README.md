@@ -11,14 +11,14 @@ Contributions are always welcome, please read the rules before contributing.
 ## Currently implemented the following algorithms:
 
 ### Arithmetic
- - GCD [Greatest Common Divisor]
- - LCM [Least Common Multiple]
+ - [GCD [Greatest Common Divisor]](arithmetic/gcd.py)
+ - [LCM [Least Common Multiple]](arithmetic/lcm.py)
 
 ### Geometric
  - Covering segments
  
 ### Searching
- - [Binary search](search/binary_search.py) [Wiki](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+ - [Binary search](search/binary_search.py)
  - [Closest pair](search/closest_pair.py)
  - Fibonacci [Recursive method]
  - Fibonacci [partial sum with Pisano period]
