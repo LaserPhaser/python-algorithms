@@ -1,9 +1,9 @@
-  language: python
-  python:
-    - 3.6
-  script:
-    - coverage run --source . -m py.test tests
-    - coverage report -m
+language: python
+python:
+  - 3.6
+script:
+  - coverage run --source . -m py.test tests
+  - coverage report -m
 
-  after_success:
-    - coveralls
+after_success:
+  - coveralls
