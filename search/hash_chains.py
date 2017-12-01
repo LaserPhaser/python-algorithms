@@ -55,7 +55,7 @@ class QueryProcessor:
             self.process_query(self.read_query())
 
 
-if __name__ == '__main__':
-    bucket_count = int(input())
-    proc = QueryProcessor(bucket_count)
-    proc.process_queries()
+
+
+proc = QueryProcessor(3)
+proc.process_queries()

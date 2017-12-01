@@ -22,7 +22,7 @@ Contributions are always welcome, please read the rules before contributing.
  - [Closest pair](search/closest_pair.py)
  - [Fibonacci [Recursive method]](search/fibonacci.py)
  - [Fibonacci by Modulo [with Pisano period ]](search/fibonacci_modulo.py)
- - Rabin-Karp algorithm searching text in strings using hash
+ - [Rabin-Karp algorithm](search/rabinkarp.py)
  - Hash chains example
 ### Sorting
  - Merge sort
