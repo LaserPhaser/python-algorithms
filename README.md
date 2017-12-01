@@ -20,9 +20,8 @@ Contributions are always welcome, please read the rules before contributing.
 ### Searching
  - [Binary search](search/binary_search.py)
  - [Closest pair](search/closest_pair.py)
- - Fibonacci [Recursive method]
- - Fibonacci [partial sum with Pisano period]
- - Fibonacci [with Pisano period ]
+ - [Fibonacci [Recursive method]](search/fibonacci.py)
+ - [Fibonacci by Modulo [with Pisano period ]](search/fibonacci_modulo.py)
  - Rabin-Karp algorithm searching text in strings using hash
  - Hash chains example
 ### Sorting

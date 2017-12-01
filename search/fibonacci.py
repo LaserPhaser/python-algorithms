@@ -1,5 +1,16 @@
-def calc_fib(n):
-    if n <= 1:
-        return n
+"""
+In mathematics, the Fibonacci numbers are the numbers in the following integer sequence, called the Fibonacci sequence,
+and characterized by the fact that every number after the first two is the sum of the two preceding ones:
+"""
 
-    return calc_fib(n - 1) + calc_fib(n - 2)
+
+def fibonacci(number):
+    """
+    Recursive implementation of fibonacci function
+    :param number: number in fibonacci sequence
+    :return: fibonacci number
+    """
+    if number <= 1:
+        return number
+
+    return fibonacci(number - 1) + fibonacci(number - 2)
