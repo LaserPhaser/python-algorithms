@@ -41,8 +41,7 @@ Contributions are always welcome, please read the rules before contributing.
  - Bidirectional Dijkstra (on priority queues)
  - AStar  (potential function - euclidean distance)
 ### Dynamic Programming
- - Knapsack
- - Fractional Knapsack
+ - [Knapsack](dynamic_programming/knapsack.py)
 
 ## Unsorted:
  - Tree traversal methods (in/pre/post order recursive and iterative)
