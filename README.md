@@ -3,8 +3,7 @@
 
 
 # Algorithms
-All source code in this project is under MIT license, feel free to use it anywhere you need it.
-Contributions are always welcome, please read the rules before contributing.
+**Collection of algorithms implemented on Python3.6**
 
 
 ## Currently implemented the following algorithms:
@@ -21,7 +20,7 @@ Contributions are always welcome, please read the rules before contributing.
  - [Binary search](search/binary_search.py)
  - [Closest pair](search/closest_pair.py)
  - [Fibonacci [Recursive method]](search/fibonacci.py)
- - [Fibonacci by Modulo [with Pisano period ]](search/fibonacci_modulo.py)
+ - [Fibonacci by Modulo [with Pisano period]](search/fibonacci_modulo.py)
  - [Rabin-Karp algorithm](search/rabinkarp.py)
  - Hash chains example
 ### Sorting

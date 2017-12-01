@@ -53,9 +53,3 @@ class QueryProcessor:
         n = int(input())
         for i in range(n):
             self.process_query(self.read_query())
-
-
-
-
-proc = QueryProcessor(3)
-proc.process_queries()
