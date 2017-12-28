@@ -1,11 +1,8 @@
-from graph.bst_check import check_if_bst
+from graphs.bst_check import check_if_bst
 
-
-# A binary tree node
 
 class Node:
 
-    # Constructor to create a new node
     def __init__(self, data):
         self.data = data
         self.left = None
@@ -33,15 +30,4 @@ class TestBSTCheck:
         root.right.left = Node(5)
         root.right.right = Node(7)
 
-        assert check_if_bst(root) == False, "Inocrrect binary tree was not recognized"
-
-    def test_empty_tree(self):
-        root = None
-        e = ValueError('test')
-        try:
-            check_if_bst(root)
-        except ValueError as e:
-            pass
-        finally:
-            assert e == ValueError(
-                "Empty root node has bee passed to the function"), "Assertion on empty root was not raised"
+        assert check_if_bst(root) == False, "Incorrect binary tree was not recognized"
