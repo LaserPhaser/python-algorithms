@@ -38,7 +38,7 @@
  - Dijkstra (on priority queue)
  - Bidirectional Dijkstra (on priority queues)
  - AStar  (potential function - euclidean distance)
- - [BST checker](graph/bst_check.py)
+ - [BST checker](graphs/bst_check.py)
 ### Dynamic Programming
  - [Knapsack](dynamic_programming/knapsack.py)
 
