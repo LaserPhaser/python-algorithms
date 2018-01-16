@@ -2,12 +2,12 @@
 [![Build Status](https://travis-ci.org/ArseniyAntonov/Algorithms.svg?branch=master)](https://travis-ci.org/ArseniyAntonov/Algorithms)  [![Coverage Status](https://coveralls.io/repos/github/ArseniyAntonov/Algorithms/badge.svg?branch=master)](https://coveralls.io/github/ArseniyAntonov/Algorithms?branch=master) 
 
 
-# Algorithms
+# python-algorithms
 python-algorithms project is a collection of algorithms implemented on `Python3.6`
 You don't need to install these project as a module (via pip) because usually you just need only one algorithm instead of all pack, so just copy and paste the source code.
 For easy navigation please use links to the source code below.
 
-## Currently implemented the following algorithms:
+## Implemented algorithms:
 
 ### Arithmetic
  - [GCD [Greatest Common Divisor]](arithmetic/gcd.py)
