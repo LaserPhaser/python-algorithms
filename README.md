@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/ArseniyAntonov/Algorithms.svg?branch=master)](https://travis-ci.org/ArseniyAntonov/Algorithms)  [![Coverage Status](https://coveralls.io/repos/github/ArseniyAntonov/Algorithms/badge.svg?branch=master)](https://coveralls.io/github/ArseniyAntonov/Algorithms?branch=master) [![Documentation Status](https://readthedocs.org/projects/python-algorithms-doc/badge/?version=latest)](http://python-algorithms-doc.readthedocs.io/en/latest/?badge=latest)              
+[![Build Status](https://travis-ci.org/ArseniyAntonov/python-algorithms.svg?branch=master)](https://travis-ci.org/ArseniyAntonov/python-algorithms)  [![Coverage Status](https://coveralls.io/repos/github/ArseniyAntonov/Algorithms/badge.svg?branch=master)](https://coveralls.io/github/ArseniyAntonov/Algorithms?branch=master) [![Documentation Status](https://readthedocs.org/projects/python-algorithms-doc/badge/?version=latest)](http://python-algorithms-doc.readthedocs.io/en/latest/?badge=latest)              
 
 # python-algorithms
 python-algorithms project is a collection of algorithms implemented on `Python3.6`
