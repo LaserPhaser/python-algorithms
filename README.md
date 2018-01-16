@@ -3,8 +3,9 @@
 
 
 # Algorithms
-**Collection of algorithms implemented on Python3.6**
-
+python-algorithms project is a collection of algorithms implemented on `Python3.6`
+You don't need to install these project as a module (via pip) because usually you just need only one algorithm instead of all pack, so just copy and paste the source code.
+For easy navigation please use links to the source code below.
 
 ## Currently implemented the following algorithms:
 
