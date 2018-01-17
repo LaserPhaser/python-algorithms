@@ -4,7 +4,7 @@ usually denoted by LCM(a, b), is the smallest positive integer that is divisible
 """
 from functools import reduce
 
-from arithmetic.gcd import gcd
+from algorithms.arithmetic.gcd import gcd
 
 
 def _lcm(integer_a: int, integer_b: int) -> int:

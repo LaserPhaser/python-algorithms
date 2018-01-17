@@ -15,23 +15,23 @@ Implemented algorithms:
 Arithmetic
 ~~~~~~~~~~
 
--  `GCD [Greatest Common Divisor] <arithmetic/gcd.py>`__
--  `LCM [Least Common Multiple] <arithmetic/lcm.py>`__
+-  `GCD [Greatest Common Divisor] <algorithms/arithmetic/gcd.py>`__
+-  `LCM [Least Common Multiple] <algorithms/arithmetic/lcm.py>`__
 
 Greedy
 ~~~~~~
 
--  `Covering segments <greedy/covering_segments.py>`__
--  `Fractional knapsack <greedy/fractional_knapsack.py>`__
+-  `Covering segments <algorithms/greedy/covering_segments.py>`__
+-  `Fractional knapsack <algorithms/greedy/fractional_knapsack.py>`__
 
 Searching
 ~~~~~~~~~
 
--  `Binary search <search/binary_search.py>`__
--  `Closest pair <search/closest_pair.py>`__
--  `Fibonacci [Recursive method] <search/fibonacci.py>`__
--  `Fibonacci by Modulo [with Pisano period] <search/fibonacci_modulo.py>`__
--  `Rabin-Karp algorithm <search/rabinkarp.py>`__
+-  `Binary search <algorithms/search/binary_search.py>`__
+-  `Closest pair <algorithms/search/closest_pair.py>`__
+-  `Fibonacci [Recursive method] <algorithms/search/fibonacci.py>`__
+-  `Fibonacci by Modulo [with Pisano period] <algorithms/search/fibonacci_modulo.py>`__
+-  `Rabin-Karp algorithm <algorithms/search/rabinkarp.py>`__
 -  Hash chains example
 
 Sorting
@@ -56,11 +56,11 @@ Algorithms on Graphs
 -  Dijkstra (on priority queue)
 -  Bidirectional Dijkstra (on priority queues)
 -  AStar (potential function - euclidean distance)
--  `BST checker <graphs/bst_check.py>`__
+-  `BST checker <algorithms/graphs/bst_check.py>`__
 
 Dynamic Programming
 ~~~~~~~~~~~~~~~~~~~
--  `Knapsack <dynamic_programming/knapsack.py>`__
+-  `Knapsack <algorithms/dynamic_programming/knapsack.py>`__
 
 Unsorted:
 ---------

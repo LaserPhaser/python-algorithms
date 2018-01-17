@@ -1,5 +1,5 @@
-from search.fibonacci import fibonacci as fibonacci_recursive
-from search.fibonacci_modulo import fibonacci_modulo
+from algorithms.search.fibonacci import fibonacci as fibonacci_recursive
+from algorithms.search.fibonacci_modulo import fibonacci_modulo
 
 
 class TestFibonacci:

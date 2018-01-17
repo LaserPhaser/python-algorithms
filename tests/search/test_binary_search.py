@@ -1,4 +1,4 @@
-from search.binary_search import binary_search
+from algorithms.search.binary_search import binary_search
 
 
 class TestBinarySearch:

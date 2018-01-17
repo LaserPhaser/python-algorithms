@@ -1,4 +1,4 @@
-from dynamic_programming import knapsack
+from algorithms.dynamic_programming import knapsack
 
 
 class TestKnapsack:

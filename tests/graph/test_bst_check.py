@@ -1,4 +1,4 @@
-from graphs.bst_check import check_if_bst
+from algorithms.graphs.bst_check import check_if_bst
 
 
 class Node:

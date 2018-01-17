@@ -1,4 +1,4 @@
-from greedy.covering_segments import covering_segments
+from algorithms.greedy.covering_segments import covering_segments
 
 
 class TestCoveringSegments:

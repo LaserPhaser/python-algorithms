@@ -1,6 +1,6 @@
 import pytest
 
-from arithmetic.gcd import gcd
+from algorithms.arithmetic.gcd import gcd
 
 
 class TestGCD:

@@ -4,7 +4,7 @@ divides each of the integers.
 """
 from functools import reduce
 
-from arithmetic.utils import positive_integer
+from algorithms.arithmetic.utils import positive_integer
 
 
 def _gcd(integer_a: int, integer_b: int) -> int:

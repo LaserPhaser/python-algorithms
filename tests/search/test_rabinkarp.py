@@ -1,4 +1,4 @@
-from search.rabinkarp import rabin_karp
+from algorithms.search.rabinkarp import rabin_karp
 
 
 class TestRabinKarp:

@@ -1,4 +1,4 @@
-from greedy.fractional_knapsack import fractional_knapsack
+from algorithms.greedy.fractional_knapsack import fractional_knapsack
 
 
 class TestFractionalKnapsack:

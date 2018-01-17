@@ -1,6 +1,6 @@
 import pytest
 
-from arithmetic.lcm import lcm
+from algorithms.arithmetic.lcm import lcm
 
 
 class TestLCM:
