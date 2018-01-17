@@ -32,10 +32,17 @@ Searching
 -  `Fibonacci [Recursive method] <search/fibonacci.py>`__
 -  `Fibonacci by Modulo [with Pisano period] <search/fibonacci_modulo.py>`__
 -  `Rabin-Karp algorithm <search/rabinkarp.py>`__
--  Hash chains example ### Sorting
+-  Hash chains example
+
+Sorting
+~~~~~~~
+
 -  Merge sort
--  Quick sort [3 partitions with randomized pivot] ### Algorithms on
-   Graphs:
+-  Quick sort [3 partitions with randomized pivot]
+
+Algorithms on Graphs
+~~~~~~~~~~~~~~~~~~~~
+
 -  Topological Sort
 -  DFS (Depth first search)
 -  SCC (Strongly connected components)
@@ -49,7 +56,10 @@ Searching
 -  Dijkstra (on priority queue)
 -  Bidirectional Dijkstra (on priority queues)
 -  AStar (potential function - euclidean distance)
--  `BST checker <graphs/bst_check.py>`__ ### Dynamic Programming
+-  `BST checker <graphs/bst_check.py>`__
+
+Dynamic Programming
+~~~~~~~~~~~~~~~~~~~
 -  `Knapsack <dynamic_programming/knapsack.py>`__
 
 Unsorted:
