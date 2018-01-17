@@ -17,6 +17,7 @@ def _lcm(integer_a: int, integer_b: int) -> int:
 
     Returns:
         Least common multiple of 2 positive integers.
+
     """
 
     # Move here to have extra check that we have in GCD
@@ -30,10 +31,17 @@ def lcm(*integer_nums: int) -> int:
     Private function for calculating LCM [least common multiple] of N integers
 
     Args:
-        *integer_nums: list of integers
+        *integer_nums: integer arguments
 
     Returns:
         Least common multiple of N positive integers.
+
+    Examples:
+        >>> lcm(16, 20)
+        80
+
+        >>> lcm(8, 9, 21)
+        504
     """
 
     return int(reduce((lambda i, j: _lcm(i, j)), integer_nums))

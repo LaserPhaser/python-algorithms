@@ -35,10 +35,17 @@ def gcd(*integer_nums: int) -> int:
     Function for calculating GCD [greatest common divisor] of N integers
 
     Args:
-        *integer_nums: list of integers
+        *integer_nums: integer arguments
 
     Returns:
         Greatest common divisor of N positive integers
+
+    Examples:
+        >>> gcd(54, 24)
+        6
+
+        >>> gcd(2, 4, 6, 8, 16)
+        2
     """
 
     return int(reduce((lambda i, j: _gcd(i, j)), integer_nums))
