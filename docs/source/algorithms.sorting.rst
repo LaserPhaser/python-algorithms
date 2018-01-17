@@ -1,30 +1,24 @@
-algorithms\.sorting package
-===========================
+algorithms\.sorting
+===================
 
-Submodules
-----------
+.. automodule:: algorithms.sorting
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
-algorithms\.sorting\.merge\_sort module
----------------------------------------
-
+Merge Sort
+~~~~~~~~~~
 .. automodule:: algorithms.sorting.merge_sort
     :members:
     :undoc-members:
     :show-inheritance:
 
-algorithms\.sorting\.quick\_sort module
----------------------------------------
 
+Quick Sort
+~~~~~~~~~~
 .. automodule:: algorithms.sorting.quick_sort
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-Module contents
----------------
-
-.. automodule:: algorithms.sorting
-    :members:
-    :undoc-members:
-    :show-inheritance:

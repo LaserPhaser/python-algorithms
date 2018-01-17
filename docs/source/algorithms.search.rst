@@ -1,62 +1,51 @@
-algorithms\.search package
-==========================
+algorithms\.search
+==================
 
-Submodules
-----------
+.. automodule:: algorithms.search
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
-algorithms\.search\.binary\_search module
------------------------------------------
-
+Binary Search
+~~~~~~~~~~~~~
 .. automodule:: algorithms.search.binary_search
     :members:
     :undoc-members:
     :show-inheritance:
 
-algorithms\.search\.closest\_pair module
-----------------------------------------
-
+Closest Pair
+~~~~~~~~~~~~
 .. automodule:: algorithms.search.closest_pair
     :members:
     :undoc-members:
     :show-inheritance:
 
-algorithms\.search\.fibonacci module
-------------------------------------
-
+Fibonacci
+~~~~~~~~~
 .. automodule:: algorithms.search.fibonacci
     :members:
     :undoc-members:
     :show-inheritance:
 
-algorithms\.search\.fibonacci\_modulo module
---------------------------------------------
-
+Fibonacci with modulo
+~~~~~~~~~~~~~~~~~~~~~
 .. automodule:: algorithms.search.fibonacci_modulo
     :members:
     :undoc-members:
     :show-inheritance:
 
-algorithms\.search\.hash\_chains module
----------------------------------------
-
+Hash chains
+~~~~~~~~~~~
 .. automodule:: algorithms.search.hash_chains
     :members:
     :undoc-members:
     :show-inheritance:
 
-algorithms\.search\.rabinkarp module
-------------------------------------
-
+Rabin-Karp
+~~~~~~~~~~
 .. automodule:: algorithms.search.rabinkarp
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-Module contents
----------------
-
-.. automodule:: algorithms.search
-    :members:
-    :undoc-members:
-    :show-inheritance:

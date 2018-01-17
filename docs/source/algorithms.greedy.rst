@@ -1,30 +1,23 @@
-algorithms\.greedy package
-==========================
+algorithms\.greedy
+==================
 
-Submodules
-----------
+.. automodule:: algorithms.greedy
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
-algorithms\.greedy\.covering\_segments module
----------------------------------------------
-
+Covering segments
+~~~~~~~~~~~~~~~~~
 .. automodule:: algorithms.greedy.covering_segments
     :members:
     :undoc-members:
     :show-inheritance:
 
-algorithms\.greedy\.fractional\_knapsack module
------------------------------------------------
-
+Fractional Knapsack
+~~~~~~~~~~~~~~~~~~~
 .. automodule:: algorithms.greedy.fractional_knapsack
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-Module contents
----------------
-
-.. automodule:: algorithms.greedy
-    :members:
-    :undoc-members:
-    :show-inheritance:
