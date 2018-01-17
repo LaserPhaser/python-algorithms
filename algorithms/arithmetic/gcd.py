@@ -10,6 +10,7 @@ from algorithms.arithmetic.utils import positive_integer
 def _gcd(integer_a: int, integer_b: int) -> int:
     """
     Private function for calculating GCD [greatest common divisor] of 2 integers
+
     Args:
         integer_a: first integer
         integer_b: second integer
@@ -32,6 +33,7 @@ def _gcd(integer_a: int, integer_b: int) -> int:
 def gcd(*integer_nums: int) -> int:
     """
     Function for calculating GCD [greatest common divisor] of N integers
+
     Args:
         *integer_nums: list of integers
 
