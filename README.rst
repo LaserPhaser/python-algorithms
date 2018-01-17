@@ -61,7 +61,7 @@ Unsorted:
 
 .. |Build Status| image:: https://travis-ci.org/ArseniyAntonov/python-algorithms.svg?branch=master
    :target: https://travis-ci.org/ArseniyAntonov/python-algorithms
-.. |Coverage Status| image:: https://coveralls.io/repos/github/ArseniyAntonov/Algorithms/badge.svg?branch=master
-   :target: https://coveralls.io/github/ArseniyAntonov/Algorithms?branch=master
 .. |Documentation Status| image:: https://readthedocs.org/projects/python-algorithms-doc/badge/?version=latest
    :target: http://python-algorithms-doc.readthedocs.io/en/latest/?badge=latest
+.. |Coverage Status| image:: https://codecov.io/gh/ArseniyAntonov/python-algorithms/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/ArseniyAntonov/python-algorithms
