@@ -7,9 +7,18 @@ and characterized by the fact that every number after the first two is the sum o
 def fibonacci(number):
     """
     Recursive implementation of fibonacci function
-    :param number: number in fibonacci sequence
-    :return: fibonacci number
+
+    Args:
+        number: number in fibonacci sequence
+
+    Returns:
+        fibonacci number
+
+    Examples:
+        >>> fibonacci_recursive(20)
+        6765
     """
+
     if number <= 1:
         return number
 

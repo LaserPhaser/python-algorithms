@@ -5,10 +5,15 @@ Calculating (n-th Fibonacci number) mod m
 
 def _fib(number):
     """
-    fibonacci number
-    :param number: number of sequence
-    :return: array of numbers
+    Fibonacci number
+
+    Args:
+        number: number of sequence
+
+    Returns:
+        array of numbers
     """
+
     init_array = [0, 1]
     for idx in range(2, number + 1):
         init_array.append(init_array[idx - 1] + init_array[idx - 2])
@@ -19,8 +24,12 @@ def _pisano_period_len(modulo):
     """
     In number theory, the nth Pisano period, written π(n),
     is the period with which the sequence of Fibonacci numbers taken modulo n repeats.
-    :param modulo:
-    :return: length of pisano period
+
+    Args:
+        modulo: modulo
+
+    Returns:
+        length of Pisano period
     """
     init_array = [0, 1]
     idx = 1
@@ -31,13 +40,22 @@ def _pisano_period_len(modulo):
             return len(init_array) - 2
 
 
-def fibonacci_modulo(n, m):
+def fibonacci_modulo(number, modulo):
     """
     Calculating (n-th Fibonacci number) mod m
-    :param n: fibonacci number
-    :param m: modulo
-    :return: (n-th Fibonacci number) mod m
+
+    Args:
+        number: fibonacci number
+        modulo: modulo
+
+    Returns:
+        (n-th Fibonacci number) mod m
+
+    Examples:
+        >>> fibonacci_modulo(11527523930876953, 26673)
+        10552
     """
-    period = _pisano_period_len(m)
-    answer = _fib(n - n // period * period) % m
+
+    period = _pisano_period_len(modulo)
+    answer = _fib(number - number // period * period) % modulo
     return answer
