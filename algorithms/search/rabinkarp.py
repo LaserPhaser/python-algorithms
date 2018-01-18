@@ -3,8 +3,10 @@ In computer science, the Rabin–Karp algorithm or Karp–Rabin algorithm is a s
 created by Richard M. Karp and Michael O. Rabin (1987)
 that uses hashing to find any one of a set of pattern strings in a text.
 For text of length n and p patterns of combined length m,
+
 its average and best case running time is O(n+m) in space O(p),
 but its worst-case time is O(nm).
+
 """
 import random
 
@@ -12,12 +14,17 @@ import random
 def _precompute_hashes(text, pattern_length, prime, x):
     """
     Function for precomputing hashes for text and length of pattern
-    :param text: text itself
-    :param pattern_length: length of pattern
-    :param prime: prime number to get modulo of
-    :param x: x random number between 1 and prime
-    :return: list of hashes
+
+    Args:
+        text: text itself
+        pattern_length: length of pattern
+        prime: prime number to get modulo of
+        x: x random number between 1 and prime
+
+    Returns:
+        list of hashes
     """
+
     hash_list = [0 for _ in range(0, len(text) - pattern_length + 1)]
     S = text[len(text) - pattern_length:len(text)]
     hash_list[len(text) - pattern_length] = _poly_hash(S, prime, x)
@@ -33,11 +40,16 @@ def _precompute_hashes(text, pattern_length, prime, x):
 def _poly_hash(text, prime, x):
     """
     Function for generating hash value from text
-    :param text:  simple text
-    :param prime: prime number to get modulo of
-    :param x: x random number between 1 and prime
-    :return: hash value of text
+
+    Args:
+        text: simple text
+        prime: prime number to get modulo of
+        x: random number between 1 and prime
+
+    Returns:
+        hash value of text
     """
+
     ans = 0
     for c in reversed(text):
         ans = (ans * x + ord(c)) % prime
@@ -46,12 +58,19 @@ def _poly_hash(text, prime, x):
 
 def _find_positions(hash_list, pHash, pattern, text):
     """
-    :param hash_list: list of hashes from text
-    :param pHash: hash of pattern
-    :param pattern: pattern itself
-    :param text: text itself
-    :return: list of positions where pattern was found
+    Function for finding position of pattern in text
+
+    Args:
+        hash_list: list of hashes from text
+        pHash: hash of pattern
+        pattern: pattern itself
+        text:  text itself
+
+    Returns:
+        list of positions where pattern was found
+
     """
+
     result = []
     for i in range(0, len(text) - len(pattern) + 1):
         if pHash != hash_list[i]:
@@ -63,11 +82,24 @@ def _find_positions(hash_list, pHash, pattern, text):
 
 def rabin_karp(text, pattern):
     """
-    Rabin Karp algorithm that finds all occurrences of pattern in text
-    :param text: text to search in
-    :param pattern: pattern to search for
-    :return: list of position where pattern placed in text
+    Rabin-Karp algorithm that finds all occurrences of pattern in text
+
+    Args:
+        text: text to search in
+        pattern: pattern to search for
+
+    Returns:
+        list of position where pattern placed in text
+
+    Examples:
+        >>> rabin_karp('AABAACAADAABAABA', 'AABA')
+        [0, 9, 12]
+
+        >>> rabin_karp('aaaaa', 'aaa')
+        [0, 1, 2]
+
     """
+
     prime = 100000007
     x = random.randint(1, prime)
 
