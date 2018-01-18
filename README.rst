@@ -3,13 +3,13 @@
 python-algorithms
 =================
 
-python-algorithms project is a collection of algorithms implemented on
+python-algorithms project is a collection of algorithms and datastructures implemented on
 ``Python3.6`` You don’t need to install these project as a module (via
 pip) because usually you just need only one algorithm instead of all
 pack, so just copy and paste the source code. For easy navigation please
 use links to the source code below.
 
-Implemented algorithms:
+Algorithms:
 -----------------------
 
 Arithmetic
@@ -24,15 +24,14 @@ Greedy
 -  `Covering segments <algorithms/greedy/covering_segments.py>`__
 -  `Fractional knapsack <algorithms/greedy/fractional_knapsack.py>`__
 
-Searching
-~~~~~~~~~
+Search
+~~~~~~
 
 -  `Binary search <algorithms/search/binary_search.py>`__
 -  `Closest pair <algorithms/search/closest_pair.py>`__
 -  `Fibonacci [Recursive method] <algorithms/search/fibonacci.py>`__
 -  `Fibonacci by Modulo [with Pisano period] <algorithms/search/fibonacci_modulo.py>`__
 -  `Rabin-Karp algorithm <algorithms/search/rabinkarp.py>`__
--  Hash chains example
 
 Sorting
 ~~~~~~~
@@ -65,13 +64,20 @@ Dynamic Programming
 Unsorted:
 ---------
 
+Datastructures:
+---------------------------
+
+-  `Hash chain <algorithms/hash_tables/hash_chain.py>`__
+
+
+
 -  Tree traversal methods (in/pre/post order recursive and iterative)
 -  Rope data structure (heavyweight strings based on splay tree with
    iterative in order traversal)
 
 .. |Build Status| image:: https://travis-ci.org/ArseniyAntonov/python-algorithms.svg?branch=master
-   :target: https://travis-ci.org/ArseniyAntonov/python-algorithms
+    :target: https://travis-ci.org/ArseniyAntonov/python-algorithms
 .. |Documentation Status| image:: https://readthedocs.org/projects/python-algorithms-doc/badge/?version=latest
-   :target: http://python-algorithms-doc.readthedocs.io/en/latest/?badge=latest
+    :target: http://python-algorithms-doc.readthedocs.io/en/latest/?badge=latest
 .. |Coverage Status| image:: https://codecov.io/gh/ArseniyAntonov/python-algorithms/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/ArseniyAntonov/python-algorithms
+    :target: https://codecov.io/gh/ArseniyAntonov/python-algorithms
