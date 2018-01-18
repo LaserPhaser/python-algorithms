@@ -9,10 +9,25 @@ until it is successful. If the search ends with the remaining half being empty, 
 def binary_search(sorted_array, target_element):
     """
     Binary search algorithm
-    :param sorted_array: list of sorted elements (integers)
-    :param target_element: element to find
-    :return: position of target_element
+
+    Args:
+        sorted_array: list of sorted elements (integers)
+        target_element:  element to find
+
+    Returns:
+        position of target_element if succes
+        -1 if element is not found
+
+    Examples:
+        >>> binary_search([1, 2, 3, 4], 5)
+        -1
+
+
+        >>> binary_search([x for x in range(10000)], 26)
+        26
+
     """
+
     left = 0
     right = (len(sorted_array) - 1)
     while left <= right:

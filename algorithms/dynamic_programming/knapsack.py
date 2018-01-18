@@ -8,9 +8,19 @@ so that the total weight is less than or equal to a given limit.
 def optimal_weight(capacity, weights):
     """
     Function calculate optimal_weight for rucksack from given list of weights
-    :param capacity: max capacity of rucksack
-    :param weights: list of weights
-    :return: max possible weight that meet <= max capacity
+
+    Args:
+
+        capacity: max capacity of rucksak
+        weights: list of weights
+
+    Returns:
+        Max possible weight that meet <= max capacity
+
+    Examples:
+        >>> optimal_weight(165, [23, 31, 29, 44, 53, 38, 63, 85, 89, 82])
+        165
+
     """
     weight_idx = 0
     possible_capacity = 0
