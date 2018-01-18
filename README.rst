@@ -61,15 +61,15 @@ Dynamic Programming
 ~~~~~~~~~~~~~~~~~~~
 -  `Knapsack <algorithms/dynamic_programming/knapsack.py>`__
 
-Unsorted:
----------
 
 Datastructures:
----------------------------
+---------------
 
 -  `Hash chain <algorithms/hash_tables/hash_chain.py>`__
 
 
+Unsorted:
+---------
 
 -  Tree traversal methods (in/pre/post order recursive and iterative)
 -  Rope data structure (heavyweight strings based on splay tree with

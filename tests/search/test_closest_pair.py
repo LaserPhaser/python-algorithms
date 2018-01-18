@@ -16,3 +16,11 @@ class TestClosestPair:
         points = [(random.randint(0, 1000), random.randint(0, 1000)) for _ in range(100)]
         assert brute_force_distance(points) == n_log_n_squared_distance(points), 'Brute force solution is not equal' \
                                                                                  ' to N (log N) ^2 solution'
+
+    def test_brute_force_distance_1_point(self):
+        points = [(2, 3)]
+        assert 0 == brute_force_distance(points), 'Brute force solution is not working for 1 point'
+
+    def test_n_log_n_squared_distance_1_point(self):
+        points = [(2, 3)]
+        assert 0 == n_log_n_squared_distance(points), 'N (log N) ^2 solution is not wirking for 1 point'
