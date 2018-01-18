@@ -7,10 +7,20 @@ from collections import namedtuple
 
 def covering_segments(segments: [tuple]) -> list:
     """
-    Function for finding minimum number of points that each segment contain
-    :param segments: list of tuples with start and end point coordinates
-    :return: list of points where segments are crossing
+    Function for finding minimum number of points that each segment contains
+
+    Args:
+        segments: list of tuples with start and end point coordinates
+
+    Returns:
+        list of points where segments are crossing
+
+    Examples:
+        >>> covering_segments([(4, 7), (1, 3), (2, 5), (5, 6)])
+        [3, 6]
+
     """
+
     segment = namedtuple('Segment', 'start end')
     points = []
     named_segments = list(map(lambda i: segment(i[0], i[1]), segments))
