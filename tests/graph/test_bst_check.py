@@ -19,7 +19,7 @@ class TestBSTCheck:
         root.right.left = Node(5)
         root.right.right = Node(7)
 
-        assert check_if_bst(root) == True, "Correct binary tree was not recognized"
+        assert check_if_bst(root) is True, "Correct binary tree was not recognized"
 
     def test_incorrect(self):
         root = Node(3)
@@ -30,4 +30,4 @@ class TestBSTCheck:
         root.right.left = Node(5)
         root.right.right = Node(7)
 
-        assert check_if_bst(root) == False, "Incorrect binary tree was not recognized"
+        assert check_if_bst(root) is False, "Incorrect binary tree was not recognized"
