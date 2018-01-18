@@ -15,18 +15,10 @@ class TestLCM:
 
     @pytest.mark.parametrize("x1, x2", [(0, 1), (1, 0), (0, 0), (-1, - 1)])
     def test_value_error(self, x1, x2):
-        try:
+        with pytest.raises(ValueError):
             lcm(x1, x2)
-        except ValueError as error:
-            assert str(error) == 'Number is not positive'
-        else:
-            raise AssertionError('ValueError was not raised')
 
     @pytest.mark.parametrize("x1, x2", [(1.0, 1), (1, 1.0), ('string', 0), ([1, 2], 2)])
     def test_type_error(self, x1, x2):
-        try:
+        with pytest.raises(TypeError):
             lcm(x1, x2)
-        except TypeError as error:
-            assert str(error) == 'Number is not integer type'
-        else:
-            raise AssertionError('TypeError was not raised')
