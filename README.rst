@@ -24,15 +24,15 @@ Greedy
 -  `Covering segments <algorithms/greedy/covering_segments.py>`__
 -  `Fractional knapsack <algorithms/greedy/fractional_knapsack.py>`__
 
-Searching
-~~~~~~~~~
+Search
+~~~~~~
 
 -  `Binary search <algorithms/search/binary_search.py>`__
 -  `Closest pair <algorithms/search/closest_pair.py>`__
 -  `Fibonacci [Recursive method] <algorithms/search/fibonacci.py>`__
 -  `Fibonacci by Modulo [with Pisano period] <algorithms/search/fibonacci_modulo.py>`__
 -  `Rabin-Karp algorithm <algorithms/search/rabinkarp.py>`__
--  Hash chains example
+-  `Hash chains example <algorithms/search/hash_chains.py>`__
 
 Sorting
 ~~~~~~~
@@ -70,8 +70,8 @@ Unsorted:
    iterative in order traversal)
 
 .. |Build Status| image:: https://travis-ci.org/ArseniyAntonov/python-algorithms.svg?branch=master
-   :target: https://travis-ci.org/ArseniyAntonov/python-algorithms
+    :target: https://travis-ci.org/ArseniyAntonov/python-algorithms
 .. |Documentation Status| image:: https://readthedocs.org/projects/python-algorithms-doc/badge/?version=latest
-   :target: http://python-algorithms-doc.readthedocs.io/en/latest/?badge=latest
+    :target: http://python-algorithms-doc.readthedocs.io/en/latest/?badge=latest
 .. |Coverage Status| image:: https://codecov.io/gh/ArseniyAntonov/python-algorithms/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/ArseniyAntonov/python-algorithms
+    :target: https://codecov.io/gh/ArseniyAntonov/python-algorithms
