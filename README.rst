@@ -3,13 +3,13 @@
 python-algorithms
 =================
 
-python-algorithms project is a collection of algorithms implemented on
+python-algorithms project is a collection of algorithms and datastructures implemented on
 ``Python3.6`` You don’t need to install these project as a module (via
 pip) because usually you just need only one algorithm instead of all
 pack, so just copy and paste the source code. For easy navigation please
 use links to the source code below.
 
-Implemented algorithms:
+Algorithms:
 -----------------------
 
 Arithmetic
@@ -32,7 +32,6 @@ Search
 -  `Fibonacci [Recursive method] <algorithms/search/fibonacci.py>`__
 -  `Fibonacci by Modulo [with Pisano period] <algorithms/search/fibonacci_modulo.py>`__
 -  `Rabin-Karp algorithm <algorithms/search/rabinkarp.py>`__
--  `Hash chains example <algorithms/search/hash_chains.py>`__
 
 Sorting
 ~~~~~~~
@@ -64,6 +63,13 @@ Dynamic Programming
 
 Unsorted:
 ---------
+
+Datastructures:
+---------------------------
+
+-  `Hash chain <algorithms/hash_tables/hash_chain.py>`__
+
+
 
 -  Tree traversal methods (in/pre/post order recursive and iterative)
 -  Rope data structure (heavyweight strings based on splay tree with

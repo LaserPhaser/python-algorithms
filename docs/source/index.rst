@@ -16,6 +16,7 @@ use links to the source code below.
         Search<algorithms.search>
         Sorting<algorithms.sorting>
         Dynamic programming<algorithms.dynamic_programming>
+        Hash Tables<algorithms.hash_tables>
 
 
 .. |Build Status| image:: https://travis-ci.org/ArseniyAntonov/python-algorithms.svg?branch=master

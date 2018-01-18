@@ -34,13 +34,6 @@ Fibonacci with modulo
     :undoc-members:
     :show-inheritance:
 
-Hash chains
-~~~~~~~~~~~
-.. automodule:: algorithms.search.hash_chains
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 Rabin-Karp
 ~~~~~~~~~~
 .. automodule:: algorithms.search.rabinkarp
