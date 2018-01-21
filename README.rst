@@ -37,7 +37,7 @@ Sorting
 ~~~~~~~
 
 -  `Merge sort <algorithms/sorting/merge_sort.py>`__
--  Quick sort [3 partitions with randomized pivot]
+-  `Quick sort with [Dutch National Flag Algorithm] optimization <algorithms/sorting/quick_sort.py>`__
 
 Algorithms on Graphs
 ~~~~~~~~~~~~~~~~~~~~
