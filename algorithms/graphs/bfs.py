@@ -1,35 +1,43 @@
-import queue
-import sys
+"""
+Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures.
+It starts at the tree root (or some arbitrary node of a graph, sometimes referred to as a 'search key')
+and explores the neighbor nodes first, before moving to the next level neighbours. [Wikipedia]
+
+Worst-case performance:	O(V + E) = O(b^d)
+
+Worst-case space complexity O(V) = O(b^d)
+
+https://wikipedia.org/wiki/Breadth-first_search
+"""
 
 
-def distance(adj, s, t):
-    q = queue.Queue()
-    layer[s] = 0
-    visited[s] = True
-    q.put(s)
-    while not q.empty():
-        v = q.get()
-        for x in adj[v]:
-            if visited[x] is False:
-                visited[x] = True
-                layer[x] = layer[v] + 1
-                q.put(x)
-    if layer[t] > n:
-        return -1
-    return layer[t]
+def bfs_iterative(graph, root):
+    """
+    Iterative version of the BFS algorithm
+
+    Args:
+        graph: dict representation of the graph
+        root: start point
 
 
-if __name__ == '__main__':
-    input = sys.stdin.read()
-    data = list(map(int, input.split()))
-    n, m = data[0:2]
-    data = data[2:]
-    edges = list(zip(data[0:(2 * m):2], data[1:(2 * m):2]))
-    adj = [[] for _ in range(n)]
-    layer = [n + 1 for _ in range(n)]
-    visited = [False for _ in range(n)]
-    for (a, b) in edges:
-        adj[a - 1].append(b - 1)
-        adj[b - 1].append(a - 1)
-    s, t = data[2 * m] - 1, data[2 * m + 1] - 1
-    print(distance(adj, s, t))
+    Returns:
+        list: in order of visiting vertices
+
+    Examples:
+
+
+    """
+    node_queue = []
+    visited = set()
+    visiting_sequence = []
+    node_queue.append(root)
+    visited.add(root)
+    while node_queue:
+        v = node_queue.pop(0)
+        visiting_sequence.append(v)
+        for x in graph[v]:
+            if x not in visited:
+                visited.add(x)
+                node_queue.append(x)
+
+    return visiting_sequence
