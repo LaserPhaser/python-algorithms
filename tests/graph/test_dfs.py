@@ -29,7 +29,7 @@ class TestDFSIterative:
         graph = prepare_undirect_graph(edges)
         assert [1, 3, 5, 4, 6, 2] == dfs_iterative(graph, 1), "Order of vertex visiting is wrong"
 
-    def test_direct_graph_3(self):
+    def test_direct_graph_4(self):
         edges = [(1, 2), (2, 3), (1, 4), (4, 5), (1, 6), (6, 7), (1, 8), (7, 9)]
         graph = prepare_undirect_graph(edges)
         assert [1, 8, 6, 7, 9, 4, 5, 2, 3] == dfs_iterative(graph, 1), "Order of vertex visiting is wrong"
