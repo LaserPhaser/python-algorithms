@@ -42,10 +42,11 @@ Sorting
 Algorithms on Graphs
 ~~~~~~~~~~~~~~~~~~~~
 
--  Topological Sort
--  DFS (Depth first search)
+
+-  `DFS (Depth first search) <algorithms/graphs/dfs.py>`__
+-  `BFS (Breadth first search) <algorithms/graphs/bfs.py>`__
 -  SCC (Strongly connected components)
--  BFS (Breadth first search)
+-  Topological Sort
 -  Bipartite (Algorithms based on BFS for check that grap is bipartite)
 -  Bellman-Ford algorithm (and negative cycle detection based on this
    approach)
