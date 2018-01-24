@@ -50,6 +50,27 @@ def prepare_direct_graph(edges):
     return graph
 
 
+def prepare_weighted_undirect_graph(edges):
+    """
+    Function for conveting list of edges with weights to dict graph representation
+    Args:
+        edges: list of tuples, example [(1, 2, 3), (3, 2, 1)]; [(node_a, node_b, weight)]
+
+    Returns:
+        >>> [(1, 2, 1), (4, 1, 2), (2, 3, 2), (1, 3, 5)]
+        defaultdict(<class 'dict'>, {1: {2: 1, 4: 2, 3: 5}, 2: {1: 1, 3: 2}, 4: {1: 2}, 3: {2: 2, 1: 5}})
+
+    """
+
+    graph = defaultdict(dict)
+
+    for (vertex_a, vertex_b, weight) in edges:
+        graph[vertex_a].update(({vertex_b: weight}))
+        graph[vertex_b].update(({vertex_a: weight}))
+
+    return graph
+
+
 def __sort_default_dict(graph):
     """
     Sorts lists elements of defaultdict(list)
@@ -60,5 +81,5 @@ def __sort_default_dict(graph):
         Sorted list elements of defaultdict(list)
     """
     for x in graph:
-        graph[x] = sorted(graph[x])
+        graph[x] = sorted(graph[x], key=lambda idx: idx[0])
     return graph
