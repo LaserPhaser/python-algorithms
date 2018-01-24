@@ -39,4 +39,6 @@ def dijkstra(graph, start, target):
             if adjacent_node not in dist or length < dist[adjacent_node]:
                 dist[adjacent_node] = length
                 q.put(adjacent_node, dist[adjacent_node])
+    if target not in dist:
+        return -1
     return dist[target]
