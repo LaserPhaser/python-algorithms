@@ -81,5 +81,5 @@ def __sort_default_dict(graph):
         Sorted list elements of defaultdict(list)
     """
     for x in graph:
-        graph[x] = sorted(graph[x], key=lambda idx: idx[0])
+        graph[x] = sorted(graph[x])
     return graph
