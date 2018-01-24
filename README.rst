@@ -45,6 +45,8 @@ Algorithms on Graphs
 
 -  `DFS (Depth first search) <algorithms/graphs/dfs.py>`__
 -  `BFS (Breadth first search) <algorithms/graphs/bfs.py>`__
+-  `Dijkstra (priority queue) <algorithms/graphs/dijkstra.py>`__
+-  `Bidirectional Dijkstra (priority queues) <algorithms/graphs/bidi_dijkstra.py>`__
 -  SCC (Strongly connected components)
 -  Topological Sort
 -  Bipartite (Algorithms based on BFS for check that grap is bipartite)
@@ -53,8 +55,6 @@ Algorithms on Graphs
 -  Bellman-Ford algorithm (and negative cycle detection based on this
    approach + infinity Arbitrage detection)
 -  Kruskal algorithm for connecting points
--  Dijkstra (on priority queue)
--  Bidirectional Dijkstra (on priority queues)
 -  AStar (potential function - euclidean distance)
 -  `BST checker <algorithms/graphs/bst_check.py>`__
 
