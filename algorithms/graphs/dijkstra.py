@@ -1,40 +1,42 @@
+"""
+Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph,
+which may represent, for example, road networks.
+It was conceived by computer scientist Edsger W. Dijkstra in 1956 and published three years later [Wikipedia]
+
+Worst-case Performance: O(|E|+|V| log |V|)
+"""
 import queue
-import sys
 
 
-def relax(u, v):
-    pass
+def dijkstra(graph, start, target):
+    """
+    Solves shortest path problem using Dijkstra algorithm
+    Args:
+        graph: graph representation
+        start: start node
+        target: target node
 
+    Returns:
+        int: distance between start and target nodes
 
-def distance(adj, cost, s, t):
-    dist[s] = 0
+    Examples:
+        >>> graph = prepare_weighted_undirect_graph(
+        [(1, 2, 7), (1, 3, 9), (1, 6, 14), (6, 3, 2), (6, 5, 9), (3, 2, 10), (3, 4, 11),
+        (2, 4, 15), (6, 5, 9), (5, 4, 6)])
+
+        >>> dijkstra(graph, 1, 6)
+        11
+
+    """
+    dist = dict()
+    dist[start] = 0
     q = queue.PriorityQueue()
-    for x in range(n):
-        q.put(x, dist[x])
+    q.put(start)
     while not q.empty():
-        u = q.get()
-        for x in range(len(adj[u])):
-            if dist[u] + cost[u][x] < dist[adj[u][x]]:
-                dist[adj[u][x]] = dist[u] + cost[u][x]
-                q.put(adj[u][x], dist[adj[u][x]])
-    if dist[t] == 10 ** 19:
-        return -1
-    return dist[t]
-
-
-if __name__ == '__main__':
-    input = sys.stdin.read()
-    data = list(map(int, input.split()))
-    n, m = data[0: 2]
-    data = data[2:]
-    edges = list(zip(zip(data[0: (3 * m): 3], data[1: (3 * m): 3]), data[2: (3 * m): 3]))
-    data = data[3 * m:]
-    adj = [[] for _ in range(n)]
-    cost = [[] for _ in range(n)]
-    dist = [10 ** 19 for _ in range(n)]
-
-    for ((a, b), w) in edges:
-        adj[a - 1].append(b - 1)
-        cost[a - 1].append(w)
-    s, t = data[0] - 1, data[1] - 1
-    print(distance(adj, cost, s, t))
+        node = q.get()
+        for adjacent_node, edge_weigth in graph[node].items():
+            length = dist[node] + edge_weigth
+            if adjacent_node not in dist or length < dist[adjacent_node]:
+                dist[adjacent_node] = length
+                q.put(adjacent_node, dist[adjacent_node])
+    return dist[target]
