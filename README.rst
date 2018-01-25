@@ -47,6 +47,7 @@ Algorithms on Graphs
 -  `BFS (Breadth first search) <algorithms/graphs/bfs.py>`__
 -  `Dijkstra (priority queue) <algorithms/graphs/dijkstra.py>`__
 -  `Bidirectional Dijkstra (priority queues) <algorithms/graphs/bidi_dijkstra.py>`__
+-  `Cycle detection (DFS) <algorithms/graphs/dfs_cycle_detection.py>`__
 -  SCC (Strongly connected components)
 -  Topological Sort
 -  Bipartite (Algorithms based on BFS for check that grap is bipartite)
