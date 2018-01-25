@@ -6,6 +6,45 @@ algorithms\.graphs
     :undoc-members:
     :show-inheritance:
 
+BFS
+~~~
+.. automodule:: algorithms.graphs.bfs
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+DFS
+~~~
+.. automodule:: algorithms.graphs.bfs
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Dijkstra
+~~~~~~~~
+.. automodule:: algorithms.graphs.dijkstra
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Bidirectional Dijkstra
+~~~~~~~~~~~~~~~~~~~~~~
+.. automodule:: algorithms.graphs.bidi_dijkstra
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Cycle detection (DFS)
+~~~~~~~~~~~~~~~~~~~~~
+.. automodule:: algorithms.graphs.acyclicity_check
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
 AStar
 ~~~~~
 .. automodule:: algorithms.graphs.AStar
@@ -27,12 +66,6 @@ Kruskal
     :undoc-members:
     :show-inheritance:
 
-Acyclicity check
-~~~~~~~~~~~~~~~~
-.. automodule:: algorithms.graphs.acyclicity_check
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 Bellman-Ford (with negative cycle detection)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,19 +74,6 @@ Bellman-Ford (with negative cycle detection)
     :undoc-members:
     :show-inheritance:
 
-BFS
-~~~
-.. automodule:: algorithms.graphs.bfs
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-Bidirectional Dijkstra
-~~~~~~~~~~~~~~~~~~~~~~
-.. automodule:: algorithms.graphs.bidirectional_dijkstra
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 Bipartite
 ~~~~~~~~~
@@ -69,12 +89,6 @@ BST check
     :undoc-members:
     :show-inheritance:
 
-Dijkstra
-~~~~~~~~
-.. automodule:: algorithms.graphs.dijkstra
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 Strongly connected components
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
