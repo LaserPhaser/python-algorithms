@@ -8,7 +8,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
-ext_modules = [Extension("algorithms.arithmetic.fib", ["algorithms/arithmetic/fib.pyx"])]
+ext_modules = [Extension("algorithms.arithmetic.fib", ["algorithms/arithmetic/fib.c"])]
 setup(
     name="python_algorithms",
     version="0.0.1",
