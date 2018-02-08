@@ -1,34 +1,38 @@
-import sys
+"""
+The Bellman–Ford algorithm is an algorithm that computes shortest paths from a single source vertex to all
+of the other vertices in a weighted digraph.
+It is slower than Dijkstra's algorithm for the same problem, but more versatile,
+as it is capable of handling graphs in which some of the edge weights are negative numbers. [Wikipedia]
+"""
 
 
-def negative_cycle(adj, cost):
-    dist[0] = 0
+def negative_cycle(graph, nodes):
+    """
+    Bellmand-Ford algorithm for negative cycle detection
 
-    for _ in range(n):
-        for u in range(len(adj)):
-            for x in range(len(adj[u])):
-                if dist[u] + cost[u][x] < dist[adj[u][x]]:
-                    dist[adj[u][x]] = dist[u] + cost[u][x]
+    Args:
+        graph: graph itself
+        nodes: number of nodes in graph
 
-    for u in range(len(adj)):
-        for x in range(len(adj[u])):
-            if dist[u] + cost[u][x] < dist[adj[u][x]]:
-                return 1
-    return 0
+    Returns:
+        bool: True if negative cycle detected, False otherwise
 
-
-if __name__ == '__main__':
-    input = sys.stdin.read()
-    data = list(map(int, input.split()))
-    n, m = data[0:2]
-    data = data[2:]
-    edges = list(zip(zip(data[0:(3 * m):3], data[1:(3 * m):3]), data[2:(3 * m):3]))
-    data = data[3 * m:]
-    adj = [[] for _ in range(n)]
-    cost = [[] for _ in range(n)]
+    Examples:
+        >>> negative_cycle({0: {1: 1}, 1: {2: -1}, 2: {3: -1}, 3: {0: -1}}), 4)
+        True
+    """
+    n = nodes
     dist = [10 ** 19 for _ in range(n)]
+    dist[0] = 0
+    for _ in range(n):
+        for u in graph:
+            for x in graph[u]:
+                distance = dist[u] + graph[u][x]
+                if distance < dist[x]:
+                    dist[x] = distance
 
-    for ((a, b), w) in edges:
-        adj[a - 1].append(b - 1)
-        cost[a - 1].append(w)
-    print(negative_cycle(adj, cost))
+    for u in graph:
+        for x in graph[u]:
+            if dist[u] + graph[u][x] < dist[x]:
+                return True
+    return False
