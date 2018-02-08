@@ -6,7 +6,7 @@ as it is capable of handling graphs in which some of the edge weights are negati
 """
 
 
-def negative_cycle(graph, nodes):
+def negative_cycle(graph, start_node, nodes):
     """
     Bellmand-Ford algorithm for negative cycle detection
 
@@ -23,7 +23,7 @@ def negative_cycle(graph, nodes):
     """
     n = nodes
     dist = [10 ** 19 for _ in range(n)]
-    dist[0] = 0
+    dist[start_node] = 0
     for _ in range(n):
         for u in graph:
             for x in graph[u]:
