@@ -51,8 +51,7 @@ Algorithms on Graphs
 -  SCC (Strongly connected components)
 -  Topological Sort
 -  Bipartite (Algorithms based on BFS for check that grap is bipartite)
--  Bellman-Ford algorithm (and negative cycle detection based on this
-   approach)
+-  `Bellman-Ford algorithm (negative cycle detection) <algorithms/graphs/bellman_ford_negative_cycle.py>`__
 -  Bellman-Ford algorithm (and negative cycle detection based on this
    approach + infinity Arbitrage detection)
 -  Kruskal algorithm for connecting points
