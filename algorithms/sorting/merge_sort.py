@@ -57,4 +57,3 @@ def merge_sort(array):
     return sort_result
 
 
-print(merge_sort([1, -10, 21, 3, 5]))

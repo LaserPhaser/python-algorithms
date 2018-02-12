@@ -16,7 +16,6 @@ class TestDFSIterative:
     def test_undirect_graph(self):
         edges = [(0, 1), (0, 2), (1, 2), (2, 0), (2, 3), (3, 3)]
         graph = prepare_undirect_graph(edges)
-        print(graph)
         assert [2, 3, 1, 0] == dfs_iterative(graph, 2), "Order of vertex visiting is wrong"
 
     def test_direct_graph_2(self):

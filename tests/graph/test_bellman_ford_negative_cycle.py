@@ -9,8 +9,7 @@ class TestBellmanFordNegativeCycleDetection:
                  (2, 3, -1),
                  (3, 0, -1)]
         graph = prepare_weighted_direct_graph(edges)
-        print(graph)
-        assert True is negative_cycle(graph,0, 4), "Graph has no cycles"
+        assert True is negative_cycle(graph, 0, 4), "Graph has no cycles"
 
     def test_no_negative_cycle_graph(self):
         edges = [(0, 1, -1),
@@ -23,4 +22,4 @@ class TestBellmanFordNegativeCycleDetection:
                  (4, 3, -3)]
         graph = prepare_weighted_direct_graph(edges)
 
-        assert False is negative_cycle(graph, 4,5), "Graph has  cycles"
+        assert False is negative_cycle(graph, 4, 5), "Graph has  cycles"
