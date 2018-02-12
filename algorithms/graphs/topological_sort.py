@@ -1,71 +1,56 @@
-import sys
+"""
+In the field of computer science, a topological sort or topological ordering of a directed graph is a linear ordering
+of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering.
+[Wikipedia]
+"""
+
+from algorithms.graphs import prepare_direct_graph
 
 
-def explore(i):
-    if t[i]:
-        return 1
-    t[i] = True
-    previsit(i)
-    for z in adj[i]:
-        if reached[z] is False:
-            if explore(z) == 1:
-                return 1
-    reached[i] = True
-    t[i] = False
-    postvisit(i)
-    ids.append(i)
-    return 0
+class TopologicalSort:
+    def __init__(self, edges):
+        self._edges_num = len(edges)
+        self._graph = prepare_direct_graph(edges)
+        self._stack = set()
+        self._ids = []
+        self._visited = set()
 
+    def _explore(self, vertex):
+        """
+        Function for exploring vertices neiborhoods and put them on stach
+        Args:
+            vertex: id of the vertex in the graph
 
-def previsit(v):
-    global clock
-    pre[v] = clock
-    clock += 1
+        """
+        if vertex in self._stack:
+            return 1
+        for adj_vertex in self._graph[vertex]:
+            if adj_vertex not in self._visited:
+                if self._explore(adj_vertex) == 1:
+                    return
+        self._visited.add(vertex)
+        self._ids.append(vertex)
 
+    def _dfs(self, edge_num):
+        """
+        Classical DFS algorithm for exploring vertices
 
-def postvisit(v):
-    global clock
-    post[v] = clock
-    clock += 1
+        Args:
+            edge_num: number of edges in the graph
+        """
+        for edge in range(edge_num):
+            if edge not in self._visited:
+                self._explore(edge)
 
+    def sort(self):
+        """
+        Function do a topological sorting
+        Returns: topologically sorted list of vertices
+        """
 
-def DFS(adj):
-    n = len(adj)
-    for i in range(n):
-        if not reached[i]:
-            explore(i)
-    return 0
+        order = []
+        self._dfs(self._edges_num)
+        for i in self._ids[::-1]:
+            order.append(i)
 
-
-def dfs(adj, used, order, x):
-    pass
-
-
-def toposort(adj):
-    used = [0] * len(adj)
-    order = []
-    DFS(adj)
-    for i in ids[::-1]:
-        order.append(i)
-
-    return order
-
-
-if __name__ == '__main__':
-    input = sys.stdin.read()
-    data = list(map(int, input.split()))
-    n, m = data[0:2]
-    data = data[2:]
-    edges = list(zip(data[0:(2 * m):2], data[1:(2 * m):2]))
-    reached = [False for _ in range(n)]
-    post = [False for _ in range(n)]
-    pre = [False for _ in range(n)]
-    t = [False for _ in range(n)]
-    ids = []
-    clock = 0
-    adj = [[] for _ in range(n)]
-    for (a, b) in edges:
-        adj[a - 1].append(b - 1)
-    order = toposort(adj)
-    for x in order:
-        print(x + 1, end=' ')
+        return [vertex for vertex in order]
