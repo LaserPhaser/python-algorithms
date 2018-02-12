@@ -49,7 +49,7 @@ Algorithms on Graphs
 -  `Bidirectional Dijkstra (priority queues) <algorithms/graphs/bidi_dijkstra.py>`__
 -  `Cycle detection (DFS) <algorithms/graphs/dfs_cycle_detection.py>`__
 -  SCC (Strongly connected components)
--  `Topological Sort <algorithms/graphs/topological_sort.pyz>`__
+-  `Topological Sort <algorithms/graphs/topological_sort.py>`__
 -  Bipartite (Algorithms based on BFS for check that grap is bipartite)
 -  `Bellman-Ford algorithm (negative cycle detection) <algorithms/graphs/bellman_ford_negative_cycle.py>`__
 -  Bellman-Ford algorithm (and negative cycle detection based on this
