@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import defaultdict, namedtuple
 
 
 def prepare_undirect_graph(edges):
@@ -111,6 +111,59 @@ def reverse_graph(graph):
         for adj, weight in neighborhood.items():
             rev_graph[adj].update(({node: weight}))
     return rev_graph
+
+
+def num_of_nodes(graph):
+    """
+    Function for calculating number of nodes in the graph
+
+    Args:
+        graph: graph representation as Example: {1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}}
+
+    Returns:
+        number of nodes in the graph
+
+
+    """
+    return __nodes_and_edges(graph).nodes
+
+
+def num_of_edges(graph):
+    """
+    Function for calculating number of edges
+
+    Args:
+        graph: graph representation as Example: {1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}}
+
+    Returns:
+        tuple: number of edges
+
+    """
+    return __nodes_and_edges(graph).edges
+
+
+def __nodes_and_edges(graph):
+    """
+    Function for calculating number of nodes and edges in the graph
+
+    Args:
+        graph: graph representation as Example: {1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}}
+
+    Returns:
+        namedtuple[nodes, edges]: number of nodes and the edges in the graph
+
+
+    """
+    GraphData = namedtuple('GData', ['nodes', 'edges'])
+    nodes = set()
+    edges = set()
+    for node, neighborhood in graph.items():
+        nodes.add(node)
+        for adj, weight in neighborhood.items():
+            nodes.add(adj)
+            edges.add((node, adj))
+    graph_data = GraphData(len(nodes), len(edges))
+    return graph_data
 
 
 def __sort_default_dict(graph):
