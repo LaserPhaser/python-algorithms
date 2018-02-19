@@ -113,6 +113,21 @@ def reverse_graph(graph):
     return rev_graph
 
 
+def get_nodes(graph):
+    """
+    Function for calculating number of nodes in the graph
+
+    Args:
+        graph: graph representation as Example: {1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}}
+
+    Returns:
+        nodes of the graph
+
+
+    """
+    return __nodes_and_edges(graph).nodes
+
+
 def num_of_nodes(graph):
     """
     Function for calculating number of nodes in the graph
@@ -125,7 +140,21 @@ def num_of_nodes(graph):
 
 
     """
-    return __nodes_and_edges(graph).nodes
+    return len(get_nodes(graph))
+
+
+def get_edges(graph):
+    """
+    Function for calculating number of edges
+
+    Args:
+        graph: graph representation as Example: {1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}}
+
+    Returns:
+        edges of the graph
+
+    """
+    return __nodes_and_edges(graph).edges
 
 
 def num_of_edges(graph):
@@ -136,10 +165,10 @@ def num_of_edges(graph):
         graph: graph representation as Example: {1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}}
 
     Returns:
-        tuple: number of edges
+        number of the edges in the graph
 
     """
-    return __nodes_and_edges(graph).edges
+    return len(get_edges(graph))
 
 
 def __nodes_and_edges(graph):
@@ -150,7 +179,7 @@ def __nodes_and_edges(graph):
         graph: graph representation as Example: {1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}}
 
     Returns:
-        namedtuple[nodes, edges]: number of nodes and the edges in the graph
+        namedtuple[nodes, edges]: nodes and the edges in the graph
 
 
     """
@@ -162,7 +191,7 @@ def __nodes_and_edges(graph):
         for adj, weight in neighborhood.items():
             nodes.add(adj)
             edges.add((node, adj))
-    graph_data = GraphData(len(nodes), len(edges))
+    graph_data = GraphData(nodes, edges)
     return graph_data
 
 
