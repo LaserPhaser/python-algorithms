@@ -210,9 +210,14 @@ def __nodes_and_edges(graph):
     edges = set()
     for node, neighborhood in graph.items():
         nodes.add(node)
-        for adj, weight in neighborhood.items():
-            nodes.add(adj)
-            edges.add((node, adj))
+        if isinstance(neighborhood, dict):
+            for adj, weight in neighborhood.items():
+                nodes.add(adj)
+                edges.add((node, adj))
+        elif isinstance(neighborhood, list):
+            for adj in neighborhood:
+                nodes.add(adj)
+                edges.add((node, adj))
     graph_data = GraphData(nodes, edges)
     return graph_data
 
