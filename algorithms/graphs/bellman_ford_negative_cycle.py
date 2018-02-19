@@ -4,15 +4,15 @@ of the other vertices in a weighted digraph.
 It is slower than Dijkstra's algorithm for the same problem, but more versatile,
 as it is capable of handling graphs in which some of the edge weights are negative numbers. [Wikipedia]
 """
+from algorithms.graphs import num_of_nodes
 
 
-def negative_cycle(graph, start_node, nodes):
+def negative_cycle(graph, start_node):
     """
-    Bellmand-Ford algorithm for negative cycle detection
+    Bellman-Ford algorithm for negative cycle detection
 
     Args:
         graph: graph itself
-        nodes: number of nodes in graph
 
     Returns:
         bool: True if negative cycle detected, False otherwise
@@ -21,7 +21,7 @@ def negative_cycle(graph, start_node, nodes):
         >>> negative_cycle({0: {1: 1}, 1: {2: -1}, 2: {3: -1}, 3: {0: -1}}), 4)
         True
     """
-    n = nodes
+    n = num_of_nodes(graph)
     dist = [10 ** 19 for _ in range(n)]
     dist[start_node] = 0
     for _ in range(n):
