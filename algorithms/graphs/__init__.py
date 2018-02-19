@@ -57,7 +57,7 @@ def prepare_weighted_undirect_graph(edges):
         edges: list of tuples, example [(1, 2, 3), (3, 2, 1)]; [(node_a, node_b, weight)]
 
     Returns:
-        >>> [(1, 2, 1), (4, 1, 2), (2, 3, 2), (1, 3, 5)]
+        >>> [(1, 2, 1), (4, 1, 2), (2, 3, 2), (1, 3, 5) ]
         defaultdict(<class 'dict'>, {1: {2: 1, 4: 2, 3: 5}, 2: {1: 1, 3: 2}, 4: {1: 2}, 3: {2: 2, 1: 5}})
 
     """
@@ -89,6 +89,28 @@ def prepare_weighted_direct_graph(edges):
         graph[vertex_a].update(({vertex_b: weight}))
 
     return graph
+
+
+def reverse_graph(graph):
+    """
+    Function for reverting direction of the graph (weights still the same)
+
+    Args:
+        graph: graph representation as Example: {1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}}
+
+    Returns:
+        reversed graph
+
+    Examples:
+        >>> reverse_graph({1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}})
+        defaultdict(<class 'dict'>, {2: {1: 1}, 3: {1: 5, 2: 2}, 1: {4: 2}})
+
+    """
+    rev_graph = defaultdict(dict)
+    for node, neighborhood in graph.items():
+        for adj, weight in neighborhood.items():
+            rev_graph[adj].update(({node: weight}))
+    return rev_graph
 
 
 def __sort_default_dict(graph):
