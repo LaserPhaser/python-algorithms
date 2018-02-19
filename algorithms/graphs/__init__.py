@@ -12,7 +12,7 @@ def prepare_undirect_graph(edges):
         Defaultdict(list): that represent graph
 
     Examples:
-        >>> prepare_graph([(1, 2), (3, 4), (2, 4), (2, 3)])
+        >>> prepare_undirect_graph([(1, 2), (3, 4), (2, 4), (2, 3)])
         defaultdict(list, {1: [2], 2: [1, 3, 4], 3: [2, 4], 4: [2, 3]})
 
     """
@@ -37,7 +37,7 @@ def prepare_direct_graph(edges):
         Defaultdict(list): that represent graph
 
     Examples:
-        >>> prepare_graph([(1, 2), (3, 4), (2, 4), (2, 3)])
+        >>> prepare_direct_graph([(1, 2), (3, 4), (2, 4), (2, 3)])
         defaultdict(list, {1: [2], 2: [1, 3, 4], 3: [2, 4], 4: [2, 3]})
 
     """
@@ -57,7 +57,7 @@ def prepare_weighted_undirect_graph(edges):
         edges: list of tuples, example [(1, 2, 3), (3, 2, 1)]; [(node_a, node_b, weight)]
 
     Returns:
-        >>> [(1, 2, 1), (4, 1, 2), (2, 3, 2), (1, 3, 5) ]
+        >>> prepare_weighted_undirect_graph([(1, 2, 1), (4, 1, 2), (2, 3, 2), (1, 3, 5) ])
         defaultdict(<class 'dict'>, {1: {2: 1, 4: 2, 3: 5}, 2: {1: 1, 3: 2}, 4: {1: 2}, 3: {2: 2, 1: 5}})
 
     """
@@ -78,7 +78,7 @@ def prepare_weighted_direct_graph(edges):
         edges: list of tuples, example [(1, 2, 3), (3, 2, 1)]; [(node_a, node_b, weight)]
 
     Returns:
-        >>> [(1, 2, 1), (4, 1, 2), (2, 3, 2), (1, 3, 5)]
+        >>> prepare_weighted_direct_graph([(1, 2, 1), (4, 1, 2), (2, 3, 2), (1, 3, 5)])
         defaultdict(dict, {1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}})
 
     """
