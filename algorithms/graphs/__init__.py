@@ -91,7 +91,7 @@ def prepare_weighted_direct_graph(edges):
     return graph
 
 
-def reverse_graph(graph):
+def reverse_weighted_graph(graph):
     """
     Function for reverting direction of the graph (weights still the same)
 
@@ -102,7 +102,7 @@ def reverse_graph(graph):
         reversed graph
 
     Examples:
-        >>> reverse_graph({1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}})
+        >>> reverse_weighted_graph({1: {2: 1, 3: 5}, 2: {3: 2}, 4: {1: 2}})
         defaultdict(<class 'dict'>, {2: {1: 1}, 3: {1: 5, 2: 2}, 1: {4: 2}})
 
     """
@@ -110,6 +110,28 @@ def reverse_graph(graph):
     for node, neighborhood in graph.items():
         for adj, weight in neighborhood.items():
             rev_graph[adj].update(({node: weight}))
+    return rev_graph
+
+
+def reverse_graph(graph):
+    """
+    Function for reverting direction of the graph
+
+    Args:
+        graph: graph representation as Example: [(1, 2), (3, 4), (2, 4), (2, 3)]
+
+    Returns:
+        reversed graph
+
+    Examples:
+        >>> reverse_graph({1: [2], 2: [1, 3, 4], 3: [2, 4], 4: [2, 3]})
+        defaultdict(<class 'list'>, {2: [1, 3, 4], 1: [2], 3: [2, 4], 4: [2, 3]})
+
+    """
+    rev_graph = defaultdict(list)
+    for node, neighborhood in graph.items():
+        for adj in neighborhood:
+            rev_graph[adj].append(node)
     return rev_graph
 
 
