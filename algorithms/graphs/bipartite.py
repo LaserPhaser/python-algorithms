@@ -5,14 +5,26 @@ connects a vertex in U to one in {\displaystyle V} V. Vertex sets U and  V are u
 Equivalently, a bipartite graph is a graph that does not contain any odd-length cycles. [Wikipedia]
 """
 import queue
+from collections import defaultdict
 
 
 def bipartite(graph):
+    """
+    Function checks if graph is bipartite
+
+    Args:
+        graph: graph representation
+
+    Returns:
+        bool: True if bipartite , False otherwise
+    """
+    color = defaultdict(int)
     visited = set()
     node_queue = queue.Queue()
-    s = 0
-    color[s] = 1
-    node_queue.put(s)
+    start_node = list(graph.keys())[0]
+    color[start_node] = 1
+    visited.add(start_node)
+    node_queue.put(start_node)
     while not node_queue.empty():
         vertex_from_queue = node_queue.get()
         for adjacent_node in graph[vertex_from_queue]:
@@ -23,9 +35,3 @@ def bipartite(graph):
                 color[adjacent_node] = color[vertex_from_queue] * -1
                 node_queue.put(adjacent_node)
     return True
-
-
-if __name__ == '__main__':
-    color = [2 for _ in range(n)]
-
-    print(bipartite(adj))
