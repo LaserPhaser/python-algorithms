@@ -50,7 +50,7 @@ Algorithms on Graphs
 -  `Cycle detection (DFS) <algorithms/graphs/dfs_cycle_detection.py>`__
 -  `SCC (Strongly connected components) <algorithms/graphs/strongly_connected.py>`__
 -  `Topological Sort <algorithms/graphs/topological_sort.py>`__
--  Bipartite (Algorithms based on BFS for check that grap is bipartite)
+-  `Bipartite <algorithms/graphs/bipartite.py>`__
 -  `Bellman-Ford algorithm (negative cycle detection) <algorithms/graphs/bellman_ford_negative_cycle.py>`__
 -  Bellman-Ford algorithm (and negative cycle detection based on this
    approach + infinity Arbitrage detection)
