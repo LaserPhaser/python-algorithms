@@ -1,4 +1,4 @@
-|Build Status| |Coverage Status| |Maintainability| |Documentation Status|
+|Build Status| |Coverage Status| |Maintainability| |Codacy| |Documentation Status|
 
 python-algorithms
 =================
@@ -84,3 +84,5 @@ Unsorted:
     :target: https://codecov.io/gh/ArseniyAntonov/python-algorithms
 .. |Maintainability| image:: https://api.codeclimate.com/v1/badges/b911a106363fd033ed21/maintainability
     :target: https://codeclimate.com/github/ArseniyAntonov/python-algorithms/maintainability
+.. |Codacy| image:: https://api.codacy.com/project/badge/Grade/dbe5942aa3b44a4588346ea757c494de    
+    :target: https://www.codacy.com/app/ArseniyAntonov/python-algorithms?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ArseniyAntonov/python-algorithms&amp;utm_campaign=Badge_Grade
