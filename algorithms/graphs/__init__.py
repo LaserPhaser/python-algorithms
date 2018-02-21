@@ -4,7 +4,7 @@ from collections import defaultdict, namedtuple
 def prepare_undirect_graph(edges):
     """
     Function for converting list of edges to dict graph representation
-    
+
     Args:
         edges: list of tuples, example: [(1,2), (2,3)]
 
