@@ -211,7 +211,7 @@ def __nodes_and_edges(graph):
     for node, neighborhood in graph.items():
         nodes.add(node)
         if isinstance(neighborhood, dict):
-            for adj, weight in neighborhood.items():
+            for adj, _ in neighborhood.items():
                 nodes.add(adj)
                 edges.add((node, adj))
         elif isinstance(neighborhood, list):

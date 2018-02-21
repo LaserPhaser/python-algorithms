@@ -121,7 +121,7 @@ class HashChain(object):
         Returns:
             True if found, False if not
         """
-        hash_string, ind = self._check_data(data)
+        _, ind = self._check_data(data)
 
         return ind != -1
 
