@@ -6,7 +6,7 @@ def prepare_undirect_graph(edges):
     Function for converting list of edges to dict graph representation
     
     Args:
-        edges: list of tuples, example: [(1,2), (2,3)] 
+        edges: list of tuples, example: [(1,2), (2,3)]
 
     Returns:
         Defaultdict(list): that represent graph
