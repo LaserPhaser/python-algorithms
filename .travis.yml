@@ -5,12 +5,24 @@ python:
   - 3.5
   - 3.6
 
+env:
+  global:
+    - CC_TEST_REPORTER_ID=0260dca67a8294b3ab5ae1034dfa868fee9e2c9b0cb86793f55ff55553febe96
+
 install:
   - pip install codecov
+
+before_script:  # code coverage tool
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 
 script:
   - coverage run --source . -m py.test tests
   - coverage report -m
 
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  
 after_success:
   - codecov
