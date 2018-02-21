@@ -18,7 +18,7 @@ before_script:  # code coverage tool
   - ./cc-test-reporter before-build
 
 script:
-  - coverage run --source . -m py.test tests
+  - coverage run --source .  --omit="*/unsorted*" -m py.test tests
   - coverage report -m
 
 after_script:
