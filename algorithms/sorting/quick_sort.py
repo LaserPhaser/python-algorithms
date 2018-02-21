@@ -1,7 +1,8 @@
 """
-Quicksort (sometimes called partition-exchange sort) is an efficient sorting algorithm,
-serving as a systematic method for placing the elements of an array in order.
-Developed by Tony Hoare in 1959[1] and published in 1961,[2] it is still a commonly used algorithm for sorting. [Wikipedia]
+Quicksort (sometimes called partition-exchange sort) is an efficient
+sorting algorithm, serving as a systematic method for placing the elements
+of an array in order. Developed by Tony Hoare in 1959[1] and published
+in 1961,[2] it is still a commonly used algorithm for sorting. [Wikipedia]
 
 https://en.wikipedia.org/wiki/Quicksort
 
