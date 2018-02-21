@@ -1,4 +1,4 @@
-|Build Status| |Coverage Status| |Documentation Status|
+|Build Status| |Coverage Status| |Maintainability| |Documentation Status|
 
 python-algorithms
 =================
@@ -82,3 +82,5 @@ Unsorted:
     :target: http://python-algorithms-doc.readthedocs.io/en/latest/?badge=latest
 .. |Coverage Status| image:: https://codecov.io/gh/ArseniyAntonov/python-algorithms/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/ArseniyAntonov/python-algorithms
+.. |Maintainability| image:: https://api.codeclimate.com/v1/badges/b911a106363fd033ed21/maintainability
+    :target: https://codeclimate.com/github/ArseniyAntonov/python-algorithms/maintainability
