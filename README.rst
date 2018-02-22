@@ -52,10 +52,8 @@ Algorithms on Graphs
 -  `Topological Sort <algorithms/graphs/topological_sort.py>`__
 -  `Bipartite <algorithms/graphs/bipartite.py>`__
 -  `Bellman-Ford algorithm (negative cycle detection) <algorithms/graphs/bellman_ford_negative_cycle.py>`__
--  Bellman-Ford algorithm (and negative cycle detection based on this
-   approach + infinity Arbitrage detection)
 -  Kruskal algorithm for connecting points
--  AStar (potential function - euclidean distance)
+-  A* (potential function - euclidean distance)
 -  `BST checker <algorithms/graphs/bst_check.py>`__
 
 Dynamic Programming
