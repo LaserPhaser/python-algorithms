@@ -67,5 +67,6 @@ def quick_sort(array, low, high):
     quick_sort(array, m2 + 1, high)
     return array
 
+
 def switch(array, a, b):
     array[a], array[b] = array[b], array[a]
