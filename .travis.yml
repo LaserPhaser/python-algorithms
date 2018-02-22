@@ -11,6 +11,7 @@ env:
 
 install:
   - pip install codecov
+  = pip install pycodestyle
 
 before_script:  # code coverage tool
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -18,6 +19,8 @@ before_script:  # code coverage tool
   - ./cc-test-reporter before-build
 
 script:
+  - pycodestyle --max-line-length=120 algorithms  --exclude=algorithms/unsorted
+  - pycodestyle --max-line-length=120 tests
   - coverage run --source .  --omit="*/algorithms/unsorted/*" -m py.test tests
   - coverage report -m
 
