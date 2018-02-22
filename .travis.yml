@@ -11,7 +11,7 @@ env:
 
 install:
   - pip install codecov
-  = pip install pycodestyle
+  - pip install pycodestyle
 
 before_script:  # code coverage tool
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
