@@ -55,5 +55,3 @@ def merge_sort(array):
     right = merge_sort(array[mid:])
     sort_result = _merge(left, right)
     return sort_result
-
-

@@ -1,7 +1,8 @@
 """
-Quicksort (sometimes called partition-exchange sort) is an efficient sorting algorithm,
-serving as a systematic method for placing the elements of an array in order.
-Developed by Tony Hoare in 1959[1] and published in 1961,[2] it is still a commonly used algorithm for sorting. [Wikipedia]
+Quicksort (sometimes called partition-exchange sort) is an efficient
+sorting algorithm, serving as a systematic method for placing the elements
+of an array in order. Developed by Tony Hoare in 1959[1] and published
+in 1961,[2] it is still a commonly used algorithm for sorting. [Wikipedia]
 
 https://en.wikipedia.org/wiki/Quicksort
 
@@ -26,10 +27,10 @@ def _partition(array, low, high):
 
     while i <= high:
         if array[i] < pivot:
-            array[i], array[mid] = array[mid], array[i]
+            switch(array, i, mid)
             mid += 1
         elif array[i] > pivot:
-            array[i], array[high] = array[high], array[i]
+            switch(array, i, high)
             high -= 1
         else:
             i += 1
@@ -60,8 +61,11 @@ def quick_sort(array, low, high):
 
     pivot = random.randint(low, high)
 
-    array[low], array[pivot] = array[pivot], array[low]
+    switch(array, low, pivot)
     m1, m2 = _partition(array, low, high)
     quick_sort(array, low, m1 - 1)
     quick_sort(array, m2 + 1, high)
     return array
+
+def switch(array, a, b):
+    array[a], array[b] = array[b], array[a]
