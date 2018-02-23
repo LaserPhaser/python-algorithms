@@ -27,13 +27,14 @@ def covering_segments(segments: [tuple]) -> list:
     named_segments.sort()
     end_point = named_segments[0].end
     point = end_point
-    for segment_index in range(0, len(named_segments)):
-        if named_segments[segment_index].start > end_point:
+
+    for segment in named_segments:
+        if segment.start > end_point:
             points.append(point)
-            end_point = named_segments[segment_index].end
+            end_point = segment.end
             point = end_point
-        if named_segments[segment_index].end < end_point:
-            end_point = named_segments[segment_index].end
+        if segment.end < end_point:
+            end_point = segment.end
             point = end_point
     points.append(point)
     return points

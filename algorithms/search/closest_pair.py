@@ -44,9 +44,9 @@ def brute_force_distance(points):
         return 0
     # Calculating distance between first two points
     min_d = _distance(points[0], points[1])
-    for x1 in range(len(points)):
-        for x2 in range(len(points)):
-            distance = _distance(points[x1], points[x2])
+    for x1, point1 in enumerate(points):
+        for x2, point2 in enumerate(points):
+            distance = _distance(point1, point2)
             if (x1 != x2) and distance < min_d:
                 min_d = distance
     return min_d
