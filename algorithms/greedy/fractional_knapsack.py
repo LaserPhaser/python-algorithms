@@ -26,10 +26,10 @@ def fractional_knapsack(capacity: int, items: [tuple]) -> float:
     v_per_item = [float(v) / float(w) for v, w in items]
     weights = [x[1] for (y, x) in reversed(sorted(zip(v_per_item, items)))]
     values = [x[0] for (y, x) in reversed(sorted(zip(v_per_item, items)))]
-    for i in range(len(values)):
+    for weight, val in zip(weights, values):
         if capacity == 0:
             return value
-        will_take = min(capacity, weights[i])
+        will_take = min(capacity, weight)
         capacity -= will_take
-        value += will_take * (float(values[i]) / (weights[i]))
+        value += will_take * (float(val) / (weight))
     return value
