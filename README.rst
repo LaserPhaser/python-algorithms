@@ -51,7 +51,7 @@ Algorithms on Graphs
 -  `SCC (Strongly connected components) <algorithms/graphs/strongly_connected.py>`__
 -  `Topological Sort <algorithms/graphs/topological_sort.py>`__
 -  `Bipartite <algorithms/graphs/bipartite.py>`__
--  `Bellman-Ford algorithm (negative cycle detection) <algorithms/graphs/bellman_ford_negative_cycle.py>`__
+-  `Bellman-Ford algorithm (negative cycle detection) <algorithms/graphs/bellman_ford.py>`__
 -  Kruskal algorithm for connecting points
 -  A* (potential function - euclidean distance)
 -  `BST checker <algorithms/graphs/bst_check.py>`__

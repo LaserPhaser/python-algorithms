@@ -1,5 +1,5 @@
 from algorithms.graphs import prepare_weighted_direct_graph
-from algorithms.graphs.bellman_ford_negative_cycle import negative_cycle
+from algorithms.graphs.bellman_ford import negative_cycle
 
 
 class TestBellmanFordNegativeCycleDetection:
