@@ -38,6 +38,7 @@ Sorting
 
 -  `Merge sort <algorithms/sorting/merge_sort.py>`__
 -  `Quick sort with [Dutch National Flag Algorithm] optimization <algorithms/sorting/quick_sort.py>`__
+-  `Heap sort <algorithms/sorting/heap_sort.py>`__
 
 Algorithms on Graphs
 ~~~~~~~~~~~~~~~~~~~~
