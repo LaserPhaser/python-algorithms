@@ -32,10 +32,7 @@ def heapSort(arr):
 
 	# One by one extract elements 
 	for i in range(n-1,0,-1): 
-		arr[i],arr[0]=arr[0],arr[i]  
-		heapify(arr,i,0) 
-
-if __name__ == "__main__":
+		
 	arr = list(map(int,input("Enter the numbers to be sorted: \n").split()))
 	heapSort(arr) 
 	n = len(arr) 
